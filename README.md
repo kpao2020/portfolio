@@ -38,8 +38,8 @@ Each project card lives in the **Projects** section of `index.html`. Replace:
 - Buttons: replace `class="disabled"` with real `href` URLs.
 
 ## 👤 Credits
-- **Author:** [Your Name]
-- **Co-pilot:** ChatGPT
+- **Author:** Ken Pao
+- **Co-pilot:** ChatGPT v5
 
 ## 📝 License
 MIT (optional — replace or remove if you prefer).

@@ -96,3 +96,27 @@ footer .socials a:hover { opacity: 1; transform: translateY(-2px); }
 
 /* Light/Dark tweaks */
 html[data-theme='light'] .text-secondary-emphasis { color: #3b4452 !important; }
+
+/* ==============================
+   Dark Mode Text Contrast Fix
+   ============================== */
+
+/* Navbar text */
+html[data-theme='dark'] .navbar,
+html[data-theme='dark'] .navbar .nav-link,
+html[data-theme='dark'] .navbar .navbar-brand {
+  color: #e6e9ef !important;  /* light gray */
+}
+
+html[data-theme='dark'] .navbar .nav-link:hover,
+html[data-theme='dark'] .navbar .navbar-brand:hover {
+  color: #ffffff !important;
+}
+
+/* Hero text */
+html[data-theme='dark'] #hero h1,
+html[data-theme='dark'] #hero h2,
+html[data-theme='dark'] #hero p,
+html[data-theme='dark'] #hero .lead {
+  color: #f5f7fa !important;  /* very light text */
+}
