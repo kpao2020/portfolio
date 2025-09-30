@@ -120,3 +120,35 @@ html[data-theme='dark'] #hero p,
 html[data-theme='dark'] #hero .lead {
   color: #f5f7fa !important;  /* very light text */
 }
+/* ==============================
+   Skills Section (clean list layout)
+   ============================== */
+#skills h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+#skills ul {
+  padding-left: 0;
+  list-style: none;
+}
+#skills li {
+  margin-bottom: 0.3rem;
+  color: inherit;
+}
+
+/* ==============================
+   Footer Icons
+   ============================== */
+footer .socials a,
+footer a[aria-label="Email"] {
+  color: inherit;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+footer .socials a:hover,
+footer a[aria-label="Email"]:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  color: var(--primary);
+}

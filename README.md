@@ -1,17 +1,18 @@
-# Personal Portfolio — v1.0.0
+# Personal Portfolio — v1.1.0
 
 A dark-mode, techy personal portfolio built with **HTML + Bootstrap + custom CSS/JS** and deployed on **GitHub Pages**.  
-Includes light/dark theme toggle, subtle animations, project grid, skills badges, and a footer-style contact section.
+Includes light/dark theme toggle, subtle animations, project grid, skills lists, and a footer-style contact section.
 
 ## ✨ Features
 - Dark-first design with **light/dark toggle** (saved in `localStorage`)
-- **Hero**, **About**, **Projects**, **Skills**, **Footer Contact**
+- Sections: **Hero**, **About**, **Projects**, **Skills**, **Footer Contact**
 - Subtle **reveal-on-scroll** animations & clean hover effects
 - **Bootstrap 5** layout & components
 - **Devicon** + **Font Awesome** icons
 - Ready for **GitHub Pages**
 
 ## 🗂 Structure
+
 ```
 index.html   # Main page
 style.css    # Custom theme + animations
@@ -25,20 +26,19 @@ README.md    # This file
 3. Visit `https://<your-username>.github.io` after a minute or two.
 
 **Customizing**
-- Replace `[Your Name]` in `index.html` and footer.
 - Update `mailto:` with your email.
 - Replace social `href="#"` with your GitHub/LinkedIn/Discord links.
-- Swap project placeholders with real screenshots, titles, descriptions, and links.
+- Add real project screenshots (`/assets/preview.png`) in each repo for better visuals.
 
-## 🧩 Adding Your Projects
-Each project card lives in the **Projects** section of `index.html`. Replace:
-- Thumbnail `<img src="...">`
-- Title `Project TBD`
-- Description `Description coming soon.`
-- Buttons: replace `class="disabled"` with real `href` URLs.
+## 🧩 Projects Showcased
+- **Popping Bubbles 🎮** → AI-driven browser game (p5.js + face-api.js)
+- **Makey Makey Game 🕹️** → Hardware-integrated team project
+- **Advanced Web Design 📄** → Solo frontend design project
+- **Bunny Cards Game 🐇🃏** → Two-player card game collab
+- **AP-Story 📖 (Archived)** → Older narrative game, repo reference only
 
 ## 👤 Credits
-- **Author:** Ken Pao
+- **Author:** Ken Pao  
 - **Co-pilot:** ChatGPT v5
 
 ## 📝 License
@@ -47,3 +47,4 @@ MIT (optional — replace or remove if you prefer).
 ---
 
 > “Blending code, creativity, and AI to create interactive browser games.”
+
