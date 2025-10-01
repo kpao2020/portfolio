@@ -1,3 +1,6 @@
+# Live Link
+https://kpao2020.github.io/portfolio
+
 # Personal Portfolio — v1.3.0
 
 A dark-mode, techy personal portfolio built with **HTML + Bootstrap + custom CSS/JS** and deployed on **GitHub Pages**.  
