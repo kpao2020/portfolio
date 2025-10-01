@@ -1,154 +1,288 @@
-/* ----------
-  Custom Theme (Dark-first with toggle)
----------- */
+/* =========================================================
+   Custom Portfolio Theme (Dark-first with toggle)
+   Author: Ken Pao | Co-pilot: ChatGPT
+   ========================================================= */
 
+/* ---------- 1) Variables ---------- */
 :root {
+  /* Dark theme */
   --bg-dark: #0b0f17;
-  --bg-dark-2: #0f1624;
+  --bg-dark-alt: #111827;
   --text-dark: #e6e9ef;
   --muted-dark: #a3adbe;
-  --primary: #6ea8fe;
   --card-bg-dark: #0f1725;
   --border-dark: #1f2a44;
 
+  /* Light theme */
   --bg-light: #f8f9fb;
+  --bg-light-alt: #f9fafb;
   --text-light: #12141a;
   --muted-light: #5a6270;
   --card-bg-light: #ffffff;
   --border-light: #e4e7ee;
 
+  /* Brand palette */
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --secondary: #9333ea;
+  --primary-light: #2563eb;
+
   --transition: 220ms cubic-bezier(.16, 1, .3, 1);
 }
 
-/* Global */
+/* ---------- 2) Base ---------- */
 html[data-theme='dark'] body {
   color: var(--text-dark);
-  background: radial-gradient(1200px 600px at 10% -20%, #1b253a 0%, rgba(27,37,58,0) 60%) no-repeat, var(--bg-dark);
+  background: linear-gradient(135deg, #0f172a 0%, #2563eb 40%, #9333ea 80%);
+  background-attachment: fixed;
 }
 html[data-theme='light'] body {
   color: var(--text-light);
-  background: var(--bg-light);
+  background: linear-gradient(135deg, #f9fafb 0%, #dbeafe 40%, #ede9fe 80%);
+  background-attachment: fixed;
 }
 
 a { text-decoration: none; }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section divider lines */
+html[data-theme='light'] section.border-top {
+  border-top: 2px solid #cbd5e1 !important; /* stronger for light mode */
+}
+
+/* ---------- 3) Layout Sections ---------- */
+
 /* Navbar */
 #navbar {
   backdrop-filter: blur(6px);
-  background-color: rgba(15, 22, 36, 0.65);
+  background-color: var(--bg-dark-alt);
 }
 html[data-theme='light'] #navbar {
   background-color: rgba(255, 255, 255, 0.85);
 }
-.navbar .nav-link {
+.navbar .nav-link,
+.navbar .navbar-brand {
   transition: color var(--transition), opacity var(--transition);
+  position: relative;
 }
-.navbar .nav-link:hover { opacity: 0.8; }
+/* Hover underline animation */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+html[data-theme='dark'] .navbar .nav-link,
+html[data-theme='dark'] .navbar .navbar-brand {
+  color: var(--text-dark) !important;
+}
+html[data-theme='dark'] .navbar .nav-link:hover,
+html[data-theme='dark'] .navbar .navbar-brand:hover {
+  color: #ffffff !important;
+}
 
 /* Hero */
-#hero { min-height: 72vh; display: grid; place-items: center; }
+#hero {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .tracking { letter-spacing: 0.08em; }
-.cta-btn { transition: transform var(--transition), box-shadow var(--transition); }
-.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(110,168,254,.25); }
 
-/* Profile */
+/* Hero text */
+#hero h1, #hero h2, #hero p, #hero .lead {
+  transition: color var(--transition);
+}
+html[data-theme='dark'] #hero h1,
+html[data-theme='dark'] #hero h2,
+html[data-theme='dark'] #hero p,
+html[data-theme='dark'] #hero .lead {
+  color: #f5f7fa;
+}
+html[data-theme='light'] #hero h1,
+html[data-theme='light'] #hero h2,
+html[data-theme='light'] #hero p,
+html[data-theme='light'] #hero .lead {
+  color: #1f2937;
+}
+
+/* Highlight text “HI, I'M” */
+html[data-theme='dark'] .text-primary {
+  color: #fbbf24 !important; /* amber */
+  font-weight: 700;
+}
+
+/* Subtitle fix */
+html[data-theme='dark'] .text-secondary-emphasis {
+  color: #f3f4f6 !important;
+}
+html[data-theme='light'] .text-secondary-emphasis {
+  color: #3b4452 !important;
+}
+
+/* CTA Button */
+.cta-btn {
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: transform var(--transition), background-color var(--transition), color var(--transition);
+  border: none;
+}
+html[data-theme='dark'] .cta-btn {
+  background: linear-gradient(90deg, #10b981, #3b82f6); /* teal → blue */
+  color: #ffffff;
+}
+html[data-theme='dark'] .cta-btn:hover {
+  background: linear-gradient(90deg, #059669, #2563eb);
+  transform: translateY(-2px);
+}
+html[data-theme='light'] .cta-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+html[data-theme='light'] .cta-btn:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* About - Profile */
 .profile-wrap { max-width: 360px; position: relative; }
 .profile-img {
   border: 1px solid var(--border-dark);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 html[data-theme='light'] .profile-img { border-color: var(--border-light); }
-.profile-img:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(110,168,254,.25); }
-
-/* Cards */
-.project-card {
-  background: var(--card-bg-dark);
-  border-color: var(--border-dark);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-.project-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(110,168,254,.18); }
-html[data-theme='light'] .project-card {
-  background: var(--card-bg-light);
-  border-color: var(--border-light);
+.profile-img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(110,168,254,.25);
 }
 
-/* Skill badges */
-.skill-badge {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  padding: .75rem 1rem;
-  border-radius: .75rem;
-  border: 1px solid var(--border-dark);
-  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+/* Section Titles */
+section h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
-html[data-theme='light'] .skill-badge { border-color: var(--border-light); }
-.skill-badge i { font-size: 1.25rem; }
-.skill-badge span { font-weight: 500; }
-
-/* Footer */
-footer .socials a { opacity: .9; transition: opacity var(--transition), transform var(--transition); }
-footer .socials a:hover { opacity: 1; transform: translateY(-2px); }
-
-/* Reveal on scroll */
-.reveal { opacity: 0; transform: translateY(12px); transition: opacity 600ms ease, transform 600ms ease; }
-.reveal.revealed { opacity: 1; transform: none; }
-
-/* Light/Dark tweaks */
-html[data-theme='light'] .text-secondary-emphasis { color: #3b4452 !important; }
-
-/* ==============================
-   Dark Mode Text Contrast Fix
-   ============================== */
-
-/* Navbar text */
-html[data-theme='dark'] .navbar,
-html[data-theme='dark'] .navbar .nav-link,
-html[data-theme='dark'] .navbar .navbar-brand {
-  color: #e6e9ef !important;  /* light gray */
+html[data-theme='dark'] section h3 {
+  color: #bfdbfe !important; /* light blue */
+}
+html[data-theme='light'] section h3 {
+  color: #1e3a8a;
 }
 
-html[data-theme='dark'] .navbar .nav-link:hover,
-html[data-theme='dark'] .navbar .navbar-brand:hover {
-  color: #ffffff !important;
-}
-
-/* Hero text */
-html[data-theme='dark'] #hero h1,
-html[data-theme='dark'] #hero h2,
-html[data-theme='dark'] #hero p,
-html[data-theme='dark'] #hero .lead {
-  color: #f5f7fa !important;  /* very light text */
-}
-/* ==============================
-   Skills Section (clean list layout)
-   ============================== */
+/* Skills */
 #skills h5 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+html[data-theme='dark'] #skills h5 {
+  color: #a5b4fc !important; /* indigo-300 */
+}
+html[data-theme='light'] #skills h5 {
   color: var(--primary);
 }
-#skills ul {
-  padding-left: 0;
-  list-style: none;
-}
-#skills li {
-  margin-bottom: 0.3rem;
-  color: inherit;
-}
+#skills ul { padding-left: 0; list-style: none; }
+#skills li { margin-bottom: 0.3rem; }
 
-/* ==============================
-   Footer Icons
-   ============================== */
+/* Footer */
+footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 footer .socials a,
 footer a[aria-label="Email"] {
   color: inherit;
   opacity: 0.85;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, color 0.2s ease;
 }
 footer .socials a:hover,
 footer a[aria-label="Email"]:hover {
   opacity: 1;
   transform: translateY(-2px);
   color: var(--primary);
+}
+
+/* ---------- 4) Components ---------- */
+
+/* Project Cards */
+.project-card {
+  border: none !important;
+  border-radius: 12px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.25); /* stronger shadow pop */
+}
+html[data-theme='dark'] .project-card {
+  background: var(--card-bg-dark);
+}
+html[data-theme='light'] .project-card {
+  background: var(--card-bg-light);
+}
+html[data-theme='dark'] .project-card .card-title { color: #ffffff; }
+html[data-theme='dark'] .project-card .card-text,
+html[data-theme='dark'] .project-card .text-body-secondary {
+  color: #f3f4f6 !important; /* brighter in dark mode */
+}
+html[data-theme='light'] .project-card .card-title { color: #111827; }
+html[data-theme='light'] .project-card .card-text,
+html[data-theme='light'] .project-card .text-body-secondary {
+  color: #374151 !important; /* dark gray */
+}
+
+/* Project Card Buttons */
+.project-card .btn-outline-primary,
+.project-card .btn-outline-secondary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.project-card .btn-outline-primary:hover,
+.project-card .btn-outline-secondary:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+html[data-theme='light'] .project-card .btn-outline-primary:hover,
+html[data-theme='light'] .project-card .btn-outline-secondary:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+  color: #ffffff;
+}
+
+/* ---------- 5) Unified Theming ---------- */
+html[data-theme='dark'] footer {
+  background-color: var(--bg-dark-alt);
+  border-top: 1px solid #1f2937;
+}
+html[data-theme='dark'] footer small,
+html[data-theme='dark'] footer .text-body-secondary {
+  color: #f9fafb !important; /* brighter footer text */
+}
+html[data-theme='light'] footer {
+  background-color: var(--bg-light-alt);
+  border-top: 1px solid var(--border-light);
+}
+html[data-theme='light'] footer small,
+html[data-theme='light'] footer .text-body-secondary {
+  color: #374151 !important;
 }

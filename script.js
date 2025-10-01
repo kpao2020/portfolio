@@ -34,7 +34,7 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.3 });
 
   items.forEach((el) => observer.observe(el));
 })();
