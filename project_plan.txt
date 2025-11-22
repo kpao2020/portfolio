@@ -2,6 +2,7 @@ Project Plan — Popping Bubbles Case Study
 Created: 2025-11-22 17:44
 
 === Instructions (as of 2025-11-22 18:50) ===
+- You are a professional portfolio designer and website programmer.
 - Review my uploaded files if any, for the latest update I have made.
 - Ask me to provide you the latest file if I forgot to upload, as needed.
 - Match the same navbar in case-study.html as index.html.
