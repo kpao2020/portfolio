@@ -38,3 +38,49 @@
 
   items.forEach((el) => observer.observe(el));
 })();
+
+// --- Active nav link highlighting ---
+(function () {
+  const links = document.querySelectorAll('.navbar .nav-link');
+  const path = location.pathname.split('/').pop() || 'index.html';
+  // If on case-study.html, force Case Study link active
+  links.forEach((a) => {
+    const href = a.getAttribute('href');
+    if (!href) return;
+    const file = href.includes('#') ? href.split('#')[0] : href;
+    const isCaseStudy = file === 'case-study.html' && path === 'case-study.html';
+    if (isCaseStudy) {
+      a.classList.add('active');
+    }
+  });
+
+  // On index, highlight section as you scroll
+  if (path === '' || path === 'index.html' || hrefMatchesRoot()) {
+    const sectionIds = ['about','projects','skills','contact'];
+    const map = new Map();
+    links.forEach((a)=>{
+      const h = a.getAttribute('href');
+      if (h && h.startsWith('#')) map.set(h.substring(1), a);
+    });
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        const id = entry.target.id;
+        const nav = map.get(id);
+        if (!nav) return;
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.navbar .nav-link').forEach(el=>el.classList.remove('active'));
+          nav.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.0 });
+    sectionIds.forEach(id=>{
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  }
+
+  function hrefMatchesRoot() {
+    // Treat "/" as index
+    return location.pathname === '/' || location.pathname.endsWith('/portfolio') || location.pathname.endsWith('/portfolio/');
+  }
+})();

@@ -1,7 +1,7 @@
 # Live Link
 https://kpao2020.github.io/portfolio
 
-# Personal Portfolio — v1.3.0
+# Personal Portfolio — v1.3.1
 
 A dark-mode, techy personal portfolio built with **HTML + Bootstrap + custom CSS/JS** and deployed on **GitHub Pages**.  
 Includes light/dark theme toggle, subtle animations, project grid, skills lists, and a footer-style contact section.
@@ -10,7 +10,12 @@ Includes light/dark theme toggle, subtle animations, project grid, skills lists,
 
 ## ✨ Version History
 
-### v1.3.0 (Latest)
+### v1.3.1 (Latest)
+- Added **navbar active highlighting** for current page/section.
+- Cleaned **case-study.html**: matched navbar, removed inline styles, fixed TOC one-link-per-line, and moved styles into `style.css`.
+- Updated **script.js** to auto-highlight nav items.
+
+### v1.3.0
 - Fixed **`.text-body-secondary` conflicts** by scoping card and footer text separately.
 - Improved **dark mode readability**:  
   - Project card text is lighter (`#f3f4f6`).  
@@ -57,7 +62,11 @@ README.md    # This file
 - Add real project screenshots (`/assets/preview.png`) in each repo.
 
 ---
+## Case Study
 
+A dedicated case study page is available at `case-study.html` (linked from the navbar). The content will be updated by Ken.
+
+---
 ## 🧩 Projects Showcased
 - **Popping Bubbles 🎮** → AI-driven browser game (p5.js + face-api.js).
 - **Makey Makey Game 🕹️** → Hardware-integrated team project.
@@ -74,7 +83,7 @@ README.md    # This file
 ---
 
 ## 📝 License
-MIT (optional — replace or remove if you prefer).
+Educational purpose.
 
 ---
 
