@@ -5,6 +5,8 @@
 
 /* ---------- 1) Variables ---------- */
 :root {
+  --active-fg: #66e3ff;
+  --active-bg: rgba(102,227,255,0.15);
   /* Dark theme */
   --bg-dark: #0b0f17;
   --bg-dark-alt: #111827;
@@ -304,9 +306,14 @@ figure figcaption { font-size: .9rem; opacity: .8; }
 .toc-link:hover { opacity: 1; text-decoration: underline; }
 
 /* Navbar active state (current page/section) */
-.navbar .nav-link.active {
-  color: var(--primary) !important;
-}
+.navbar .nav-link.active { color: var(--active-fg) !important; background: var(--active-bg); border-radius: 8px; }
 html[data-theme='dark'] .navbar .nav-link.active::after {
   width: 100%;
 }
+
+html[data-theme='light'] .navbar .nav-link.active { color: var(--primary-hover) !important; background: rgba(79,70,229,0.12); }
+html[data-theme='dark'] .toc-link { color: var(--text-dark); }
+html[data-theme='light'] .toc-link { color: var(--text-light); }
+/* Global link accent */
+a:not(.nav-link):not(.btn):not(.btn-link) { color: var(--primary); }
+a:not(.nav-link):not(.btn):not(.btn-link):hover { color: var(--primary-hover); }

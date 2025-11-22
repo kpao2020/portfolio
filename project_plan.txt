@@ -9,8 +9,8 @@ Created: 2025-11-22 17:44
 - README updates must match the same format and layout; include a version update.
 - Project plan must include the user's instructions verbatim so they can be referenced next time.
 - Ask for approval before making changes; ask one question at a time.
-- Update log, plan, readme.md with my updated instructions (if any), version update, and appropriate context.
-- Update Completed tasks and remaining tasks as needed, based on my chat conversation with you.
+- Update log, plan, readme.md with my updated instructions (if any), version update, changes and appropriate context.
+- Update this plan file on section "Completed tasks" and "Remaining action items" as needed, based on my chat conversation with you.
 - Always provide me downloadable files only to the files that have changes made.
 - Always ask me review and approval before you made changes to html, css or js files. 
 - No approval needed for log, plan, or readme files.
@@ -61,3 +61,10 @@ Notes: Will ask for approval before each change.
 - Confirmed TOC one-per-line via CSS and removed inline styles if present.
 - Bumped README version and added changelog entry.
 - Updated project log and plan per instruction to keep everything current.
+
+=== Changes 2025-11-22 21:23 ===
+- Implemented distinct navbar active highlight (Option A) using lighter primary and background pill.
+- Matched case-study sidebar TOC colors to theme variables for dark/light.
+- Set hyperlink color to site accent (var(--primary)) with hover variant.
+- Bumped README version and added new Version History entry.
+- Logged updates in project_log.log.
