@@ -1,7 +1,7 @@
 # Live Link
 https://kpao2020.github.io/portfolio
 
-# Personal Portfolio — v1.3.4
+# Personal Portfolio — v1.3.5
 
 A dark-mode, techy personal portfolio built with **HTML + Bootstrap + custom CSS/JS** and deployed on **GitHub Pages**.  
 Includes light/dark theme toggle, subtle animations, project grid, skills lists, and a footer-style contact section.
@@ -10,7 +10,13 @@ Includes light/dark theme toggle, subtle animations, project grid, skills lists,
 
 ## ✨ Version History
 
-### v1.3.4 (Latest)
+### v1.3.5 (Latest)
+- **Dark-mode TOC contrast fixed** on `case-study.html` sidebar (user implementation). Heading “On this page” and `.toc-link` states now pass contrast in dark theme.
+- Case study copy polished: references **face-api.js**, **p5.js**, and **p5play** in the hero blurb.
+- Replaced the prototype image placeholder with a real asset (`/bubble-game/assets/proto_img.png`) in the Solution section.
+- Synced **project plan** and **project log** with this update set; prepared deploy checklist.
+
+### v1.3.4
 - Reviewed uploads; prepared precise **line-numbered fixes** for `case-study.html` active link and navbar.
 - Confirmed CSS variables and active pill styles exist in `style.css`; suggested HTML fix for duplicate `class` attr.
 - Updated **project plan** and **project log** per instructions.
@@ -59,10 +65,11 @@ Includes light/dark theme toggle, subtle animations, project grid, skills lists,
 ## 🗂 Structure
 
 ```
-index.html   # Main page
-style.css    # Custom theme + animations
-script.js    # Theme toggle + reveal-on-scroll
-README.md    # This file
+index.html      # Main page
+style.css       # Custom theme + animations
+script.js       # Theme toggle + reveal-on-scroll
+README.md       # This file
+case-study.html # Dedicated case study
 ```
 
 ---
@@ -81,7 +88,7 @@ README.md    # This file
 ---
 ## Case Study
 
-A dedicated case study page is available at `case-study.html` (linked from the navbar). The content will be updated by Ken.
+A dedicated case study page is available at `case-study.html` (linked from the navbar).
 
 ---
 ## 🧩 Projects Showcased

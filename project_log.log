@@ -4,3 +4,5 @@
 [2025-11-22 21:08:29] Reviewed latest uploads; fixed case-study navbar & image token; updated README to next version; updated plan & log.
 [2025-11-22 21:23:46] Applied visual updates: navbar active highlight (Option A), TOC theme matching, link color accent; bumped README; updated plan.
 [2025-11-22 21:33:44] Reviewed files; bumped README; appended plan with exact line-numbered fix; pending approval for HTML changes.
+[2025-11-22 21:48:00] v1.3.5 — User fixed dark-mode TOC (sidebar links + heading) in style.css; verified case-study visuals; updated README and plan; pending approval for minor case-study HTML copy/asset fixes.
+[2025-11-22 22:05:00] v1.3.5 — User finalized dark-mode TOC and case-study copy/image; generated README and plan; awaiting deploy + README merge.

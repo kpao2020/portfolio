@@ -317,3 +317,26 @@ html[data-theme='light'] .toc-link { color: var(--text-light); }
 /* Global link accent */
 a:not(.nav-link):not(.btn):not(.btn-link) { color: var(--primary); }
 a:not(.nav-link):not(.btn):not(.btn-link):hover { color: var(--primary-hover); }
+
+/* ===== TOC DARK-MODE FINAL OVERRIDES ===== */
+html[data-theme='dark'] .sticky-toc h6 {
+  color: #9cdcff !important; /* or #ffffff if you prefer */
+  text-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+html[data-theme='dark'] .sticky-toc .toc-link:link,
+html[data-theme='dark'] .sticky-toc .toc-link:visited { 
+  color: #9cdcff;
+}
+
+html[data-theme='dark'] .sticky-toc .toc-link:hover,
+html[data-theme='dark'] .sticky-toc .toc-link:focus { 
+  color: #66e3ff;
+  text-decoration: underline;
+}
+
+html[data-theme='dark'] .sticky-toc .toc-link.active,
+html[data-theme='dark'] .sticky-toc .toc-link[aria-current="true"] {
+  color: #ffffff;
+  font-weight: 600;
+}

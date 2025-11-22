@@ -42,10 +42,14 @@ Notes: Will ask for approval before each change.
 
 === Completed tasks ===
 1) Add nav link to case-study.html in index.html after line 29.
+2) **User fixed dark-mode TOC colors** for case-study sidebar (links + heading) in `style.css` and confirmed contrast in browser.
+3) Case study hero text updated to reference face-api.js, p5.js, and p5play (copy polish).
+4) Replaced prototype image placeholder with real asset at `/bubble-game/assets/proto_img.png`.
+5) Synced docs: README bumped to **v1.3.5**; plan/log updated accordingly.
 
 === Remaining action items ===
-2) Upload case-study.html to your portfolio repo and deploy on GitHub Pages.
-3) Merge README updates into README.md.
+2) Upload `case-study.html` to your portfolio repo and deploy on GitHub Pages.
+3) Merge README updates into `README.md`.
 4) Optionally add more images from bubble-game/assets for before/after.
 
 === Changes 2025-11-22 19:06 ===
@@ -69,3 +73,7 @@ Notes: Will ask for approval before each change.
 - Set hyperlink color to site accent (var(--primary)) with hover variant.
 - Bumped README version and added new Version History entry.
 - Logged updates in project_log.log.
+
+=== Changes 2025-11-22 22:05 ===
+- v1.3.5 finalized: captured user-led TOC contrast fix and case study content updates.
+- Generated updated README and project_log entries; kept HTML/CSS/JS untouched per approval rule.
