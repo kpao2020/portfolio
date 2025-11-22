@@ -1,0 +1,21 @@
+Project Plan — Popping Bubbles Case Study
+Created: 2025-11-22 17:44
+
+Artifacts (drafts in this session):
+- case-study.html
+- README_UPDATE.md
+- project_log.txt
+
+Pending actions (need your approval before changes to your repo):
+1) Add nav link to case-study.html in index.html after line 29.
+2) Upload case-study.html to your portfolio repo and deploy on GitHub Pages.
+3) Merge README updates into README.md.
+4) Optionally add more images from bubble-game/assets for before/after.
+
+Time estimates:
+- Add nav link + deploy: 10–15 min
+- Polish visuals/copy in case-study: 30–45 min
+- README edits + commit: 10–15 min
+- Optional gallery assets: 20–30 min
+
+Notes: Will ask for approval before each change.

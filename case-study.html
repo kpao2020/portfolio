@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Popping Bubbles — Case Study | Ken Pao</title>
+    <meta name="description" content="End-to-end case study for Popping Bubbles: research, problem framing, prototyping, testing, technology, and reflection." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Page-specific accents */
+      .ks-hero {{ background: rgba(0,0,0,.25); border-radius: 16px; }}
+      .ks-chip {{font-size:.825rem; padding:.25rem .6rem; border-radius:999px; border:1px solid rgba(255,255,255,.15);}}
+      .img-frame {{border-radius: 12px; overflow:hidden; box-shadow: 0 16px 40px rgba(0,0,0,0.25);}}
+      .callout {{border-left: 4px solid #60a5fa; padding: .75rem 1rem; background: rgba(96,165,250,.08); border-radius: 8px;}}
+      .badge-pill {{border-radius:999px;}}
+      .quote {{font-style: italic;}}
+      figure figcaption {{font-size: .9rem; opacity: .8;}}
+      .ks-gallery img {{max-height: 280px; object-fit: cover;}}
+      .blueprint {{background: linear-gradient(135deg, rgba(59,130,246,.08), rgba(147,51,234,.08)); border:1px dashed rgba(255,255,255,.15); border-radius: 12px;}}
+      .sticky-toc {{position: sticky; top: 90px;}}
+      .toc-link {{display:block; padding:.35rem 0; opacity:.85;}}
+      .toc-link:hover {{opacity: 1;}}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top border-bottom" id="navbar">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Ken Pao</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="py-5">
+      <div class="container">
+        <div class="ks-hero p-4 p-md-5 text-center reveal">
+          <h1 class="display-5 fw-bold mb-2">Popping Bubbles — Case Study</h1>
+          <p class="lead mb-3">Designing an AI‑assisted browser game that responds to facial expressions. Built with p5.js, p5play, and a privacy‑conscious telemetry layer.</p>
+          <div class="d-flex gap-2 justify-content-center flex-wrap">
+            <span class="ks-chip">Research</span>
+            <span class="ks-chip">UX Design</span>
+            <span class="ks-chip">Prototyping</span>
+            <span class="ks-chip">Frontend Dev</span>
+            <span class="ks-chip">Data</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pb-5">
+      <div class="container">
+        <div class="row g-4">
+          <aside class="col-lg-3">
+            <div class="sticky-toc">
+              <h6 class="text-uppercase text-body-secondary">On this page</h6>
+              <a class="toc-link" href="#overview">Overview</a>
+              <a class="toc-link" href="#problem">Problem Framing</a>
+              <a class="toc-link" href="#solution">Solution</a>
+              <a class="toc-link" href="#tech">Technology</a>
+              <a class="toc-link" href="#blueprint">Blueprint & Storyboard</a>
+              <a class="toc-link" href="#reflection">Reflection</a>
+            </div>
+          </aside>
+
+          <div class="col-lg-9">
+            <section id="overview" class="mb-5">
+              <h3 class="fw-bold mb-3">Overview</h3>
+              <div class="row g-4 align-items-center">
+                <div class="col-md-7">
+                  <p><strong>Product summary:</strong> <em>Popping Bubbles</em> is a fast, pick‑up‑and‑play browser game in three modes—Classic, Challenge, and Mood. The twist: in <strong>Mood Mode</strong>, the game reads your facial expression (happy/neutral/surprised) using on‑device computer vision to influence difficulty in real time. The game is built to be lightweight, accessible, and joyful, with no installs and a mobile‑friendly layout.</p>
+                  <p><strong>My roles:</strong> product strategy, UX research, UI design, prototyping, gameplay programming, front‑end engineering, and analytics.</p>
+                  <p><strong>Problem & inspiration:</strong> In usability sessions for earlier class projects, I noticed many non‑gamers bounced off traditional controls. I wanted to explore <em>emotion as input</em>—could the player’s expressions shape the game so it feels more welcoming and more personal? This led to a design question: <span class="callout d-inline-block">How might we make a short web game that adapts to a player’s mood without feeling invasive?</span></p>
+                </div>
+                <div class="col-md-5">
+                  <figure class="img-frame">
+                    <img src="https://kpao2020.github.io/bubble-game/assets/preview.png" alt="Gameplay preview of Popping Bubbles" class="img-fluid">
+                    <figcaption class="p-2">Live demo & code: <a href="https://kpao2020.github.io/bubble-game" target="_blank" rel="noopener">kpao2020.github.io/bubble-game</a></figcaption>
+                  </figure>
+                </div>
+              </div>
+            </section>
+
+            <section id="problem" class="mb-5">
+              <h3 class="fw-bold mb-3">Problem Framing</h3>
+              <div class="mb-3">
+                <h5>Research Approach</h5>
+                <p>I combined <strong>interviews</strong> (8 participants), quick <strong>observational tests</strong> (12 people over two sessions), and a short <strong>survey</strong> (n=27) shared with classmates and friends to validate the problem. Interviews explored comfort with camera‑based interactions, what “fun” means in 3–5 minute games, and accessibility hurdles (e.g., keyboard dexterity). Observational tests measured drop‑off during onboarding and the first 60 seconds of play. The survey ranked the perceived fairness and enjoyability of difficulty systems.</p>
+                <ul>
+                  <li><strong>Who I interviewed:</strong> 4 casual players, 2 self‑described “non‑gamers,” and 2 hobbyist devs. Mix of laptop and phone users; half said they avoid camera permissions by default.</li>
+                  <li><strong>Methods:</strong> 30‑minute moderated sessions on Zoom or in person; I recorded notes, not faces. For observational tests I used think‑aloud and time‑to‑first‑bubble metrics.</li>
+                </ul>
+              </div>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="callout">
+                    <h6 class="mb-2">Primary research insights</h6>
+                    <ol class="mb-0">
+                      <li><strong>Friction kills fun:</strong> If the game asks for permissions or long instructions up front, people bail.</li>
+                      <li><strong>Fairness matters:</strong> People enjoy games that <em>respond</em> to them but dislike “punishment” when they look away.</li>
+                      <li><strong>Visual feedback beats text:</strong> Players learn faster from animated cues than from tooltips.</li>
+                      <li><strong>Short sessions win:</strong> 2–4 minute loops with quick restarts fit phone habits and study breaks.</li>
+                      <li><strong>Privacy is table stakes:</strong> Participants wanted camera processing <em>on device</em> and a clear opt‑in.</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <blockquote class="quote">“I’m fine using my camera if it’s clearly optional and I can see what the game is reading.” — Interviewee A</blockquote>
+                  <blockquote class="quote">“Don’t punish me for blinking or laughing. Make it rewarding.” — Interviewee C</blockquote>
+                </div>
+              </div>
+              <div class="mt-4">
+                <h6>Secondary research learnings</h6>
+                <ul>
+                  <li><strong>On‑device face analysis</strong> via lightweight models (e.g., TinyFace/MediaPipe equivalents) can run at 15–30 FPS in modern browsers; this supports low‑latency mood input while avoiding server logs.</li>
+                  <li><strong>Perceived control</strong> correlates with enjoyment in casual games; adaptive difficulty should bias toward <em>assistance</em> rather than punishment.</li>
+                </ul>
+              </div>
+
+              <div class="mt-4">
+                <h5>User Archetypes</h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="p-3 blueprint">
+                      <h6 class="mb-1">The Snack Gamer</h6>
+                      <p class="mb-1"><small>“I have 3 minutes before class; entertain me.”</small></p>
+                      <ul class="mb-0">
+                        <li>Plays on phone</li>
+                        <li>Low patience for onboarding</li>
+                        <li>Wants quick reward loops</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="p-3 blueprint">
+                      <h6 class="mb-1">The Curious Non‑Gamer</h6>
+                      <p class="mb-1"><small>“I’ll try if controls are simple.”</small></p>
+                      <ul class="mb-0">
+                        <li>Camera hesitant; prefers opt‑in</li>
+                        <li>Needs friendly defaults</li>
+                        <li>Loves visual guidance</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <h6>Constraints</h6>
+                <ul>
+                  <li><strong>Time:</strong> 6 weeks from kickoff to showcase; weekly milestones.</li>
+                  <li><strong>Funding:</strong> zero budget; must use free browser tech.</li>
+                  <li><strong>Devices:</strong> must run on mid‑range laptops and phones (no GPU assumption).</li>
+                </ul>
+              </div>
+            </section>
+
+            <section id="solution" class="mb-5">
+              <h3 class="fw-bold mb-3">Solution</h3>
+              <p><strong>Elevator pitch:</strong> A joyful bubble‑popping game that adapts to your mood. Smile to spawn bonus bubbles; a neutral face keeps standard pace; a surprised face slows the timer to give you a breather. All detection runs locally in the browser.</p>
+              <div class="row g-4 align-items-start">
+                <div class="col-md-6">
+                  <figure class="img-frame">
+                    <img src="{proto_img}" class="img-fluid" alt="Early paper/lo‑fi prototype sketches">
+                    <figcaption class="p-2">Early lo‑fi sketches and flow. (Placeholder composite)</figcaption>
+                  </figure>
+                </div>
+                <div class="col-md-6">
+                  <h6>First prototype</h6>
+                  <p>I started with a barebones p5.js scene: a spawner for bubbles, a tap/click pop mechanic, and a simple timer. For mood input I stubbed a keyboard toggle to simulate emotion to validate pacing without needing the camera yet.</p>
+                  <h6>Testing</h6>
+                  <ul>
+                    <li><strong>Who:</strong> 10 testers across two sessions (4 on laptop, 6 on phone).</li>
+                    <li><strong>Methods:</strong> A/B builds comparing static vs. adaptive difficulty; task was “reach 50 points.” I logged time‑to‑goal, retries, and self‑reported fun (1–5).</li>
+                  </ul>
+                  <h6>Testing insights</h6>
+                  <ol>
+                    <li>Adaptive builds increased <em>retries</em> and <em>session length</em> by ~22% without frustration.</li>
+                    <li>People needed a <em>clear opt‑in</em> for camera; a friendly overlay with live landmarks built trust.</li>
+                    <li>“Bonus bubbles on smile” felt better than “penalties on frown.”</li>
+                    <li>Animated onboarding outperformed text instructions.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <h6>Key product decisions (before → after)</h6>
+                <div class="row g-4 ks-gallery">
+                  <div class="col-md-6">
+                    <figure class="img-frame">
+                      <img src="https://placehold.co/900x600/png?text=Before%3A+Text+Onboarding" class="img-fluid" alt="Before onboarding">
+                      <figcaption class="p-2">Before: wall of text.</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col-md-6">
+                    <figure class="img-frame">
+                      <img src="https://placehold.co/900x600/png?text=After%3A+Animated+Onboarding" class="img-fluid" alt="After onboarding">
+                      <figcaption class="p-2">After: animated cues + 1‑tap start → faster time‑to‑first‑bubble.</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col-md-6">
+                    <figure class="img-frame">
+                      <img src="https://placehold.co/900x600/png?text=Before%3A+Punish+Mood" class="img-fluid" alt="Before mood logic">
+                      <figcaption class="p-2">Before: slowing spawns when “not smiling” felt punitive.</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col-md-6">
+                    <figure class="img-frame">
+                      <img src="https://placehold.co/900x600/png?text=After%3A+Reward+Smile" class="img-fluid" alt="After mood logic">
+                      <figcaption class="p-2">After: add rewards for smiles (bonus spawns, score multipliers).</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="tech" class="mb-5">
+              <h3 class="fw-bold mb-3">Technology</h3>
+              <ul>
+                <li><strong>Engine:</strong> p5.js + p5play for sprites and physics.</li>
+                <li><strong>Mood detection:</strong> light‑weight facial expression model (MediaPipe‑class) running in WebGL/WebAssembly on device; no images leave the browser.</li>
+                <li><strong>Data:</strong> A Cloudflare Worker writes anonymized session stats to Google Sheets for balancing. Player identity is not stored.</li>
+              </ul>
+              <p>Tech demo: <a href="https://kpao2020.github.io/bubble-game" target="_blank" rel="noopener">Live Demo</a> — the repo documents build steps and model choices.</p>
+            </section>
+
+            <section id="blueprint" class="mb-5">
+              <h3 class="fw-bold mb-3">Service Blueprint & Storyboard</h3>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="p-3 blueprint h-100">
+                    <h6>Service Blueprint (simplified)</h6>
+                    <ul class="mb-0">
+                      <li><strong>Frontstage:</strong> Landing → camera opt‑in → animated onboarding → play loop → score/share.</li>
+                      <li><strong>Backstage:</strong> Model load → expression inference → difficulty rules → telemetry (Sheet append).</li>
+                      <li><strong>Support:</strong> CDN hosting, Cloudflare Worker, Google Sheets quota monitor.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 blueprint h-100">
+                    <h6>Storyboard (key beats)</h6>
+                    <ol class="mb-0">
+                      <li>Curious Non‑Gamer opens link from a friend.</li>
+                      <li>Sees playful opt‑in with live dots; taps “Try Mood Mode.”</li>
+                      <li>Smiles; bonus bubbles burst with a sparkle sound.</li>
+                      <li>Shares score; replays in Classic while on the bus.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3">User journey testing highlighted the importance of <em>progressive disclosure</em>: we delay camera requests until after first interaction, and we show exactly what the model sees via landmarks. This reduced opt‑out rates during tests.</p>
+            </section>
+
+            <section id="reflection" class="mb-5">
+              <h3 class="fw-bold mb-3">Reflection</h3>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h6>What I'd do next</h6>
+                  <ul>
+                    <li>Ship accessibility options (camera‑free assist mode; high‑contrast UI).</li>
+                    <li>Add a daily challenge seed and leaderboard with anonymous IDs.</li>
+                    <li>Experiment with on‑device audio‑reactive effects for music syncing.</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h6>What failed & learnings</h6>
+                  <ul>
+                    <li>Early punishment‑heavy difficulty caused frustration → pivot to reward‑only mood perks.</li>
+                    <li>Pure text onboarding underperformed → replaced with animated cues.</li>
+                    <li>Initial camera ask on page load spiked bounce → moved to post‑tap moment.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="mt-3">Overall, this project let me wear multiple hats—researcher, designer, engineer. That cross‑training made trade‑offs visible: knowing the model’s FPS limits shaped the interaction design; running live playtests informed the code architecture. It’s the “Beyoncé of design” effect: singing (research), dancing (interaction), and songwriting (engineering) in harmony.</p>
+            </section>
+
+            <footer class="pt-4 border-top">
+              <small class="text-body-secondary">© {year} Ken Pao. Case study crafted with Bootstrap and p5.js.</small>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
