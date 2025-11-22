@@ -46,11 +46,11 @@ Notes: Will ask for approval before each change.
 3) Case study hero text updated to reference face-api.js, p5.js, and p5play (copy polish).
 4) Replaced prototype image placeholder with real asset at `/bubble-game/assets/proto_img.png`.
 5) Synced docs: README bumped to **v1.3.5**; plan/log updated accordingly.
+6) Upload `case-study.html` to your portfolio repo and deploy on GitHub Pages.
+7) Merge README updates into `README.md`.
 
 === Remaining action items ===
-2) Upload `case-study.html` to your portfolio repo and deploy on GitHub Pages.
-3) Merge README updates into `README.md`.
-4) Optionally add more images from bubble-game/assets for before/after.
+1) Optionally add more images from bubble-game/assets for before/after.
 
 === Changes 2025-11-22 19:06 ===
 - Merged case study styles into style.css and ensured one-per-line TOC links.
