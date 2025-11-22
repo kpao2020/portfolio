@@ -1,6 +1,13 @@
 Project Plan — Popping Bubbles Case Study
 Created: 2025-11-22 17:44
 
+=== Instructions (as of 2025-11-22 18:50) ===
+- Match the same navbar in case-study.html as index.html.
+- Remove inline styles from case-study.html; move them into style.css; fix incorrect double curly braces syntax.
+- README updates must match the same format and layout; include a version update.
+- Project plan must include the user's instructions verbatim so they can be referenced next time.
+- Ask for approval before making changes; ask one question at a time.
+
 Artifacts (drafts in this session):
 - case-study.html
 - README_UPDATE.md
@@ -19,3 +26,12 @@ Time estimates:
 - Optional gallery assets: 20–30 min
 
 Notes: Will ask for approval before each change.
+
+
+
+=== Changes 2025-11-22 19:06 ===
+- Merged case study styles into style.css and ensured one-per-line TOC links.
+- Replaced case-study.html navbar with the same markup as index.html and set Case Study link active.
+- Added JS for nav active highlighting across pages/sections.
+- Bumped README version and added changelog entry.
+- Updated logs (.txt and .log).
