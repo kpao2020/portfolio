@@ -7,12 +7,18 @@ Created: 2025-11-22 17:44
 - README updates must match the same format and layout; include a version update.
 - Project plan must include the user's instructions verbatim so they can be referenced next time.
 - Ask for approval before making changes; ask one question at a time.
+- Update log, plan, readme.md with my updated instructions, and appropriate content
 
-Artifacts (drafts in this session):
+Artifacts:
+- index.html
 - case-study.html
-- README_UPDATE.md
-- project_log.txt
+- README.md
+- style.css
+- script.js
+- project_log.log
+- project_plan.txt
 
+=== Initial requests ===
 Pending actions (need your approval before changes to your repo):
 1) Add nav link to case-study.html in index.html after line 29.
 2) Upload case-study.html to your portfolio repo and deploy on GitHub Pages.
@@ -27,7 +33,13 @@ Time estimates:
 
 Notes: Will ask for approval before each change.
 
+=== Completed tasks ===
+1) Add nav link to case-study.html in index.html after line 29.
 
+=== Remaining action items ===
+2) Upload case-study.html to your portfolio repo and deploy on GitHub Pages.
+3) Merge README updates into README.md.
+4) Optionally add more images from bubble-game/assets for before/after.
 
 === Changes 2025-11-22 19:06 ===
 - Merged case study styles into style.css and ensured one-per-line TOC links.
@@ -35,3 +47,11 @@ Notes: Will ask for approval before each change.
 - Added JS for nav active highlighting across pages/sections.
 - Bumped README version and added changelog entry.
 - Updated logs (.txt and .log).
+
+=== Changes 2025-11-22 21:08 ===
+- Reviewed latest uploaded files (`index.html`, `case-study.html`, `style.css`, `script.js`, `README.md`).
+- Fixed navbar link markup and ensured active state on case-study page.
+- Replaced placeholder image token with live asset URL.
+- Confirmed TOC one-per-line via CSS and removed inline styles if present.
+- Bumped README version and added changelog entry.
+- Updated project log and plan per instruction to keep everything current.
