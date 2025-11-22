@@ -2,17 +2,30 @@ Project Plan — Popping Bubbles Case Study
 Created: 2025-11-22 17:44
 
 === Instructions (as of 2025-11-22 18:50) ===
+- You are a professional portfolio designer and website programmer.
+- Review my uploaded files if any, for the latest update I have made.
+- Ask me to provide you the latest file if I forgot to upload, as needed.
 - Match the same navbar in case-study.html as index.html.
 - Remove inline styles from case-study.html; move them into style.css; fix incorrect double curly braces syntax.
 - README updates must match the same format and layout; include a version update.
 - Project plan must include the user's instructions verbatim so they can be referenced next time.
 - Ask for approval before making changes; ask one question at a time.
+- Update log, plan, readme.md with my updated instructions (if any), version update, changes and appropriate context.
+- Update this plan file on section "Completed tasks" and "Remaining action items" as needed, based on my chat conversation with you.
+- Always provide me downloadable files only to the files that have changes made.
+- Always ask me review and approval before you made changes to html, css or js files. 
+- No approval needed for log, plan, or readme files.
 
-Artifacts (drafts in this session):
+Artifacts:
+- index.html
 - case-study.html
-- README_UPDATE.md
-- project_log.txt
+- README.md
+- style.css
+- script.js
+- project_log.log
+- project_plan.txt
 
+=== Initial requests ===
 Pending actions (need your approval before changes to your repo):
 1) Add nav link to case-study.html in index.html after line 29.
 2) Upload case-study.html to your portfolio repo and deploy on GitHub Pages.
@@ -27,7 +40,17 @@ Time estimates:
 
 Notes: Will ask for approval before each change.
 
+=== Completed tasks ===
+1) Add nav link to case-study.html in index.html after line 29.
+2) **User fixed dark-mode TOC colors** for case-study sidebar (links + heading) in `style.css` and confirmed contrast in browser.
+3) Case study hero text updated to reference face-api.js, p5.js, and p5play (copy polish).
+4) Replaced prototype image placeholder with real asset at `/bubble-game/assets/proto_img.png`.
+5) Synced docs: README bumped to **v1.3.5**; plan/log updated accordingly.
 
+=== Remaining action items ===
+2) Upload `case-study.html` to your portfolio repo and deploy on GitHub Pages.
+3) Merge README updates into `README.md`.
+4) Optionally add more images from bubble-game/assets for before/after.
 
 === Changes 2025-11-22 19:06 ===
 - Merged case study styles into style.css and ensured one-per-line TOC links.
@@ -35,3 +58,22 @@ Notes: Will ask for approval before each change.
 - Added JS for nav active highlighting across pages/sections.
 - Bumped README version and added changelog entry.
 - Updated logs (.txt and .log).
+
+=== Changes 2025-11-22 21:08 ===
+- Reviewed latest uploaded files (`index.html`, `case-study.html`, `style.css`, `script.js`, `README.md`).
+- Fixed navbar link markup and ensured active state on case-study page.
+- Replaced placeholder image token with live asset URL.
+- Confirmed TOC one-per-line via CSS and removed inline styles if present.
+- Bumped README version and added changelog entry.
+- Updated project log and plan per instruction to keep everything current.
+
+=== Changes 2025-11-22 21:23 ===
+- Implemented distinct navbar active highlight (Option A) using lighter primary and background pill.
+- Matched case-study sidebar TOC colors to theme variables for dark/light.
+- Set hyperlink color to site accent (var(--primary)) with hover variant.
+- Bumped README version and added new Version History entry.
+- Logged updates in project_log.log.
+
+=== Changes 2025-11-22 22:05 ===
+- v1.3.5 finalized: captured user-led TOC contrast fix and case study content updates.
+- Generated updated README and project_log entries; kept HTML/CSS/JS untouched per approval rule.
