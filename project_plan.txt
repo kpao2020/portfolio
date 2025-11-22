@@ -2,12 +2,18 @@ Project Plan — Popping Bubbles Case Study
 Created: 2025-11-22 17:44
 
 === Instructions (as of 2025-11-22 18:50) ===
+- Review my uploaded files if any, for the latest update I have made.
+- Ask me to provide you the latest file if I forgot to upload, as needed.
 - Match the same navbar in case-study.html as index.html.
 - Remove inline styles from case-study.html; move them into style.css; fix incorrect double curly braces syntax.
 - README updates must match the same format and layout; include a version update.
 - Project plan must include the user's instructions verbatim so they can be referenced next time.
 - Ask for approval before making changes; ask one question at a time.
-- Update log, plan, readme.md with my updated instructions, and appropriate content
+- Update log, plan, readme.md with my updated instructions (if any), version update, and appropriate context.
+- Update Completed tasks and remaining tasks as needed, based on my chat conversation with you.
+- Always provide me downloadable files only to the files that have changes made.
+- Always ask me review and approval before you made changes to html, css or js files. 
+- No approval needed for log, plan, or readme files.
 
 Artifacts:
 - index.html
