@@ -1,7 +1,7 @@
 # Live Link
 https://kpao2020.github.io/portfolio
 
-# Personal Portfolio — v1.3.5
+# Personal Portfolio — v1.3.6
 
 A dark-mode, techy personal portfolio built with **HTML + Bootstrap + custom CSS/JS** and deployed on **GitHub Pages**.  
 Includes light/dark theme toggle, subtle animations, project grid, skills lists, and a footer-style contact section.
@@ -10,7 +10,10 @@ Includes light/dark theme toggle, subtle animations, project grid, skills lists,
 
 ## ✨ Version History
 
-### v1.3.5 (Latest)
+### v1.3.6 (latest)
+- add a **development journey** section
+
+### v1.3.5
 - **Dark-mode TOC contrast fixed** on `case-study.html` sidebar (user implementation). Heading “On this page” and `.toc-link` states now pass contrast in dark theme.
 - Case study copy polished: references **face-api.js**, **p5.js**, and **p5play** in the hero blurb.
 - Replaced the prototype image placeholder with a real asset (`/bubble-game/assets/proto_img.png`) in the Solution section.

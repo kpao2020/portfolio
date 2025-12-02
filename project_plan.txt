@@ -77,3 +77,6 @@ Notes: Will ask for approval before each change.
 === Changes 2025-11-22 22:05 ===
 - v1.3.5 finalized: captured user-led TOC contrast fix and case study content updates.
 - Generated updated README and project_log entries; kept HTML/CSS/JS untouched per approval rule.
+
+=== Changes 2025-12-01 16:35 ===
+- v1.3.6 add a Development Journey section

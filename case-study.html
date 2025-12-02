@@ -70,7 +70,7 @@
               <h3 class="fw-bold mb-3">Overview</h3>
               <div class="row g-4 align-items-center">
                 <div class="col-md-7">
-                  <p><strong>Product summary:</strong> <em>Popping Bubbles</em> is a fast, pick‑up‑and‑play browser game in three modes—Emotion, Focus, and Zen. The twist: in <strong>Emotion Mode</strong>, the game reads your facial expression (happy/sad/angry/stressed/neutral) using on‑device camera vision to influence difficulty in real time. The game is built to be lightweight, accessible, and joyful, with no installs and a mobile‑friendly layout.</p>
+                  <p><strong>Project summary:</strong> <em>Popping Bubbles</em> is a fast, pick‑up‑and‑play browser game in three modes—Emotion, Focus, and Zen. The twist: in <strong>Emotion Mode</strong>, the game reads your facial expression (happy/sad/angry/stressed/neutral) using on‑device camera vision to influence difficulty in real time. The game is built to be lightweight, accessible, and joyful, with no installs and a mobile‑friendly layout.</p>
                   <p><strong>My roles:</strong> Product strategy, UX research, UI design, Prototyping, Gameplay programming, Front‑end engineering, and System analytics.</p>
                   <p><strong>Problem & inspiration:</strong> In usability sessions from previou projects, I noticed many non‑gamers bounced off traditional controls. I wanted to explore <em>emotion as input</em>—could the player’s expressions shape the game, so it feels more welcoming and more personal? This led to a design question: <span class="callout d-inline-block">How might we make a short web game that adapts to a player’s emotion without feeling invasive?</span></p>
                 </div>
@@ -107,6 +107,7 @@
                   </div>
                 </div>
                 <div class="col-md-6">
+                  <h6 class="mt-2">Quotes</h6>
                   <blockquote class="quote">“I’m fine using my camera if it’s clearly optional and I can see what the game is reading.” — Interviewee A</blockquote>
                   <blockquote class="quote">“Don’t punish me for blinking or laughing. Make it rewarding.” — Interviewee C</blockquote>
                 </div>
@@ -157,9 +158,9 @@
               </div>
             </section>
 
-            <section id="solution" class="mb-5">
-              <h3 class="fw-bold mb-3">Solution</h3>
-              <p><strong>Elevator pitch:</strong> A joyful bubble‑popping game that adapts to your Emotion. Smile to spawn bonus bubbles; a neutral face keeps standard pace; a surprised face slows the timer to give you a breather. All detection runs locally in the browser.</p>
+            <section id="devjourney" class="mb-5">
+              <h3 class="fw-bold mb-3">Development Journey</h3>
+              <p><strong>Overview:</strong> An exciting, challenging and troublesome journey. It's fun to design and build something from scratch, make it works, break it apart, add new features, sleep with it, beautify it and more.</p>
               <div class="row g-4 align-items-start">
                 <div class="col-md-6">
                   <figure class="img-frame">
@@ -190,6 +191,51 @@
                     </ul>
                     </li>
                   </ul>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <h6>Key product decisions (before → after)</h6>
+                <div class="row g-4 ks-gallery">
+                  <div class="col-md-6">
+                    <figure class="img-frame">
+                      <img src="https://placehold.co/900x600/png?text=Before%3A+Text+Onboarding" class="img-fluid" alt="Before onboarding">
+                      <figcaption class="p-2">Before: wall of text.</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col-md-6">
+                    <figure class="img-frame">
+                      <img src="https://placehold.co/900x600/png?text=After%3A+Animated+Onboarding" class="img-fluid" alt="After onboarding">
+                      <figcaption class="p-2">After: animated cues + 1‑tap start → faster time‑to‑first‑bubble.</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col-md-6">
+                    <figure class="img-frame">
+                      <img src="https://placehold.co/900x600/png?text=Before%3A+Punish+Emotion" class="img-fluid" alt="Before Emotion logic">
+                      <figcaption class="p-2">Before: slowing spawns when “not smiling” felt punitive.</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col-md-6">
+                    <figure class="img-frame">
+                      <img src="https://placehold.co/900x600/png?text=After%3A+Reward+Smile" class="img-fluid" alt="After Emotion logic">
+                      <figcaption class="p-2">After: add rewards for smiles (bonus spawns, score multipliers).</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="solution" class="mb-5">
+              <h3 class="fw-bold mb-3">Solution</h3>
+              <p><strong>Elevator pitch:</strong> A joyful bubble‑popping game that adapts to your Emotion. Smile to spawn bonus bubbles; a neutral face keeps standard pace; a surprised face slows the timer to give you a breather. All detection runs locally in the browser.</p>
+              <div class="row g-4 align-items-start">
+                <div class="col-md-6">
+                  <figure class="img-frame">
+                    <img src="assets/proto_img.png" class="img-fluid" alt="Early paper/lo‑fi prototype sketches">
+                    <figcaption class="p-2">Early lo‑fi sketches and flow. (Placeholder composite)</figcaption>
+                  </figure>
+                </div>
+                <div class="col-md-6">
                   <h6>First working prototype</h6>
                   <p> started with a barebones p5.js scene: a spawner for bubbles, a tap/click pop mechanic, and a simple timer. For emotion input I stubbed a keyboard toggle to simulate emotion to validate pacing without needing the camera yet. Then add the face-api.js to build the emotion detection system with auto-adjusting game mechanics to enhance the emotion mode.</p>
                   <h6>Testing</h6>
