@@ -1,7 +1,7 @@
 # Live Link
 https://kpao2020.github.io/portfolio
 
-# Personal Portfolio — v1.3.6
+# Personal Portfolio — v1.4.0
 
 A dark-mode, techy personal portfolio built with **HTML + Bootstrap + custom CSS/JS** and deployed on **GitHub Pages**.  
 Includes light/dark theme toggle, subtle animations, project grid, skills lists, and a footer-style contact section.
@@ -10,7 +10,10 @@ Includes light/dark theme toggle, subtle animations, project grid, skills lists,
 
 ## ✨ Version History
 
-### v1.3.6 (latest)
+### v1.4.0
+- add screenshots to various sections and adjust layout
+
+### v1.3.6
 - add a **development journey** section
 
 ### v1.3.5

@@ -58,6 +58,7 @@
               <h6 class="text-uppercase text-body-secondary">On this page</h6>
               <a class="toc-link" href="#overview">Overview</a>
               <a class="toc-link" href="#problem">Problem Framing</a>
+              <a class="toc-link" href="#devjourney">Development Journey</a>
               <a class="toc-link" href="#solution">Solution</a>
               <a class="toc-link" href="#tech">Technology</a>
               <a class="toc-link" href="#blueprint">Blueprint & Storyboard</a>
@@ -87,7 +88,7 @@
               <h3 class="fw-bold mb-3">Problem Framing</h3>
               <div class="mb-3">
                 <h5>Research Approach</h5>
-                <p>I combined <strong>interviews</strong> (12 participants), quick <strong>observational tests</strong> (18 people over three sessions), and a short <strong>survey</strong> (n=32) shared with classmates and friends to validate the problem. Interviews explored comfort with camera‑based interactions, what “fun” means in 5–minute games, and accessibility hurdles (e.g., keyboard dexterity). Observational tests measured drop‑off during onboarding and the first 60 seconds of play. The survey ranked the perceived fairness and enjoyability of difficulty systems.</p>
+                <p>I combined <strong>interviews</strong> (12 participants), quick <strong>observational tests</strong> 20 people online over three sessions), and a short <strong>survey</strong> (n=32) shared with classmates and friends to validate the problem. Interviews explored comfort with camera‑based interactions, what “fun” means in 5–minute games, and accessibility hurdles (e.g., keyboard dexterity). Observational tests measured drop‑off during onboarding and the first 60 seconds of play. The survey ranked the perceived fairness and enjoyability of difficulty systems.</p>
                 <ul>
                   <li><strong>Who I interviewed:</strong> 8 casual players, 2 self‑described “non‑gamers,” and 2 hobbyist devs. Mix of laptop and smart phone users; half said they avoid camera permissions by default.</li>
                   <li><strong>Methods:</strong> 30‑minute moderated sessions on Zoom or in person; I recorded notes, not faces. For observational tests I used think‑aloud and time‑to‑first‑bubble metrics.</li>
@@ -164,8 +165,12 @@
               <div class="row g-4 align-items-start">
                 <div class="col-md-6">
                   <figure class="img-frame">
-                    <img src="assets/proto_img.png" class="img-fluid" alt="Early paper/lo‑fi prototype sketches">
-                    <figcaption class="p-2">Early lo‑fi sketches and flow. (Placeholder composite)</figcaption>
+                    <img src="assets/first_gameplay.png" class="img-fluid" alt="First prototype game play screenshot">
+                    <figcaption class="p-2">First prototype game play screenshot</figcaption>
+                  </figure>
+                  <figure class="img-frame">
+                    <img src="assets/first_end_screen.png" class="img-fluid" alt="First prototype end screen">
+                    <figcaption class="p-2">First prototype end screen</figcaption>
                   </figure>
                 </div>
                 <div class="col-md-6">
@@ -195,30 +200,18 @@
               </div>
 
               <div class="mt-4">
-                <h6>Key product decisions (before → after)</h6>
+                <h6>Key Design decisions (before → after)</h6>
                 <div class="row g-4 ks-gallery">
                   <div class="col-md-6">
                     <figure class="img-frame">
-                      <img src="https://placehold.co/900x600/png?text=Before%3A+Text+Onboarding" class="img-fluid" alt="Before onboarding">
-                      <figcaption class="p-2">Before: wall of text.</figcaption>
+                      <img src="assets/first_game_mechanic.png" class="img-fluid" alt="Before GDevelop5 coding limitation">
+                      <figcaption class="p-2">Before: GDevelop5 coding limitation.</figcaption>
                     </figure>
                   </div>
                   <div class="col-md-6">
                     <figure class="img-frame">
-                      <img src="https://placehold.co/900x600/png?text=After%3A+Animated+Onboarding" class="img-fluid" alt="After onboarding">
-                      <figcaption class="p-2">After: animated cues + 1‑tap start → faster time‑to‑first‑bubble.</figcaption>
-                    </figure>
-                  </div>
-                  <div class="col-md-6">
-                    <figure class="img-frame">
-                      <img src="https://placehold.co/900x600/png?text=Before%3A+Punish+Emotion" class="img-fluid" alt="Before Emotion logic">
-                      <figcaption class="p-2">Before: slowing spawns when “not smiling” felt punitive.</figcaption>
-                    </figure>
-                  </div>
-                  <div class="col-md-6">
-                    <figure class="img-frame">
-                      <img src="https://placehold.co/900x600/png?text=After%3A+Reward+Smile" class="img-fluid" alt="After Emotion logic">
-                      <figcaption class="p-2">After: add rewards for smiles (bonus spawns, score multipliers).</figcaption>
+                      <img src="assets/code.png" class="img-fluid" alt="After VSCode full flexibility for coding">
+                      <figcaption class="p-2">After: VSCode coding allow full flexibility.</figcaption>
                     </figure>
                   </div>
                 </div>
@@ -254,7 +247,7 @@
               </div>
 
               <div class="mt-4">
-                <h6>Key product decisions (before → after)</h6>
+                <h6>Key Game Features updates (before → after)</h6>
                 <div class="row g-4 ks-gallery">
                   <div class="col-md-6">
                     <figure class="img-frame">
@@ -297,6 +290,7 @@
             <section id="blueprint" class="mb-5">
               <h3 class="fw-bold mb-3">Service Blueprint & Storyboard</h3>
               <div class="row g-4">
+
                 <div class="col-md-6">
                   <div class="p-3 blueprint h-100">
                     <h6>Service Blueprint (simplified)</h6>
@@ -306,6 +300,20 @@
                       <li><strong>Support:</strong> CDN hosting, Cloudflare Worker, Google Sheets quota monitor.</li>
                     </ul>
                   </div>
+                </div>
+                <div class="col-md-6">
+                  <figure class="img-frame">
+                    <img src="https://placehold.co/900x600/png?text=After%3A+Reward+Smile" class="img-fluid" alt="After Emotion logic">
+                    <figcaption class="p-2">After: add rewards for smiles (bonus spawns, score multipliers).</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="row g-4 mt-3">
+                <div class="col-md-6">
+                  <figure class="img-frame">
+                    <img src="https://placehold.co/900x600/png?text=After%3A+Reward+Smile" class="img-fluid" alt="After Emotion logic">
+                    <figcaption class="p-2">After: add rewards for smiles (bonus spawns, score multipliers).</figcaption>
+                  </figure>
                 </div>
                 <div class="col-md-6">
                   <div class="p-3 blueprint h-100">
@@ -319,6 +327,7 @@
                   </div>
                 </div>
               </div>
+              
               <p class="mt-3">User journey testing highlighted the importance of <em>progressive disclosure</em>: we delay camera requests until after first interaction, and we show exactly what the model sees via landmarks. This reduced opt‑out rates during tests.</p>
             </section>
 
@@ -332,6 +341,20 @@
                     <li>Add a daily Focus seed and leaderboard with anonymous IDs.</li>
                     <li>Experiment with on‑device audio‑reactive effects for music syncing.</li>
                   </ul>
+                </div>
+                <div class="col-md-6">
+                  <figure class="img-frame">
+                    <img src="https://placehold.co/900x600/png?text=After%3A+Reward+Smile" class="img-fluid" alt="After Emotion logic">
+                    <figcaption class="p-2">After: add rewards for smiles (bonus spawns, score multipliers).</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="row g-4 mt-3">
+                <div class="col-md-6">
+                  <figure class="img-frame">
+                    <img src="https://placehold.co/900x600/png?text=After%3A+Reward+Smile" class="img-fluid" alt="After Emotion logic">
+                    <figcaption class="p-2">After: add rewards for smiles (bonus spawns, score multipliers).</figcaption>
+                  </figure>
                 </div>
                 <div class="col-md-6">
                   <h6>What failed & learnings</h6>
