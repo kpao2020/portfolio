@@ -55,7 +55,7 @@
         <div class="row g-4">
           <aside class="col-lg-3">
             <div class="sticky-toc">
-              <h6 class="text-uppercase text-body-secondary">On this page</h6>
+              <h6 class="text-uppercase text-body-secondary"><a class="toc-link" href="#">On this page</a></h6>
               <a class="toc-link" href="#overview">Overview</a>
               <a class="toc-link" href="#problem">Problem Framing</a>
               <a class="toc-link" href="#devjourney">Development Journey</a>
@@ -77,8 +77,8 @@
                 </div>
                 <div class="col-md-5">
                   <figure class="img-frame">
-                    <img src="assets/modes.png" alt="Gameplay preview of Popping Bubbles" class="img-fluid">
-                    <figcaption class="p-2">Live Game: <a href="https://kpao2020.github.io/bubble-game" target="_blank" rel="noopener">kpao2020.github.io/bubble-game</a></figcaption>
+                    <img src="assets/modes.png" alt="Select Game mode screen" class="img-fluid">
+                    <figcaption class="p-2">Live Game -><a href="https://kpao2020.github.io/bubble-game" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary ms-2">Play Game</a></figcaption>
                   </figure>
                 </div>
               </div>
@@ -98,9 +98,9 @@
                   <div class="col-md-6">
                     <figure class="img-frame">
                       <img src="assets/matrix.png" class="img-fluid"
-                          alt="Early research notes and user observation findings">
+                          alt="Early user observation findings">
                       <figcaption class="p-2">
-                        Early qualitative notes from observations on attention lapses and motivation triggers.
+                        Early user observation findings turning into impact-effort matrix.
                       </figcaption>
                     </figure>
                   </div>
@@ -148,9 +148,9 @@
                   <div class="col-md-6">
                     <figure class="img-frame">
                       <img src="assets/note.png" class="img-fluid"
-                          alt="Difficulty and attention segmentation matrix used during framing">
+                          alt="Early research notes and findings">
                       <figcaption class="p-2">
-                        Difficulty / attention segmentation matrix that shaped the initial problem definition.
+                        Early research notes and findings.
                       </figcaption>
                     </figure>
                   </div>
@@ -238,7 +238,7 @@
 
               <div class="mt-4">
                 <h6>Key Design decisions (before → after)</h6>
-                <div class="row g-4 ks-gallery">
+                <div class="row g-4 ks-gallery artifact-gallery">
                   <div class="col-md-6">
                     <figure class="img-frame">
                       <div class="img-fixed">
@@ -260,7 +260,7 @@
 
               <div class="mt-4">
                 <h6>Supporting artifacts</h6>
-                <div class="row g-4 ks-gallery">
+                <div class="row g-4 ks-gallery artifact-gallery">
                   <div class="col-md-3">
                     <figure class="img-frame">
                       <div class="img-fixed">
@@ -275,57 +275,57 @@
                   <div class="col-md-3">
                     <figure class="img-frame">
                       <div class="img-fixed">
-                        <img src="assets/new_emotion.png" class="img-fluid" alt="Balancing matrix for difficulty and rewards across modes">
+                        <img src="assets/new_emotion.png" class="img-fluid" alt="update UI for bubble colors and emotion indicator chip">
                       </div>
                       
                       <figcaption class="p-2">
-                        Feature - Impact matrix used to prioritize s.
+                        UI update - add contrast to bubble colors and emotion indicator chip.
                       </figcaption>
                     </figure>
                   </div>
                   <div class="col-md-3">
                     <figure class="img-frame">
                       <div class="img-fixed">
-                        <img src="assets/green_point.png" class="img-fluid" alt="Loading screen while model and assets initialize">
+                        <img src="assets/green_point.png" class="img-fluid" alt="game screenshot showing how to earn points">
                       </div>
                       
                       <figcaption class="p-2">
-                        Loading screen for model init and asset preloads to keep the first run smooth.
+                        Zen mode serves onboarding purpose on how to earn points.
                       </figcaption>
                     </figure>
                   </div>
                   <div class="col-md-3">
                     <figure class="img-frame">
                       <div class="img-fixed">
-                        <img src="assets/red_penalty.png" class="img-fluid" alt="Early UI preview of game layout during development">
+                        <img src="assets/red_penalty.png" class="img-fluid" alt="game screenshot showing what would lose points">
                       </div>
                       
                       <figcaption class="p-2">
-                        Early UI preview as the layout evolved from prototype to Emotion Mode-ready.
+                        Play through trial and error to avoid losing points.
                       </figcaption>
                     </figure>
                   </div>
                 </div>
-                <div class="row g-4 ks-gallery">
+                <div class="row g-4 ks-gallery artifact-gallery">
                   <div class="col-md-3">
                     <figure class="img-frame">
                       <div class="img-fixed">
-                        <img src="assets/project design.png" class="img-fluid" alt="Jira board used to track features and playtest tasks">
+                        <img src="assets/project design.png" class="img-fluid" alt="Miro board showing project design development cycle">
                       </div>
                       
                       <figcaption class="p-2">
-                        Jira board for tracking Emotion Mode tasks, bugs, and playtest follow-ups.
+                        Project Design development cycle.
                       </figcaption>
                     </figure>
                   </div>
                   <div class="col-md-3">
                     <figure class="img-frame">
                       <div class="img-fixed">
-                        <img src="assets/name.png" class="img-fluid" alt="Balancing matrix for difficulty and rewards across modes">
+                        <img src="assets/name.png" class="img-fluid" alt="Name screen to allow player to input unique name for tracking stats">
                       </div>
                       
                       <figcaption class="p-2">
-                        Difficulty/reward matrix used to tune Bubble counts, timers, and smile bonuses.
+                        Use an unique player-defined name to track game stats.
                       </figcaption>
                     </figure>
                   </div>
@@ -336,18 +336,18 @@
                       </div>
                       
                       <figcaption class="p-2">
-                        Loading screen for model init and asset preloads to keep the first run smooth.
+                        Loading screen for model init and asset preloads to keep users informed.
                       </figcaption>
                     </figure>
                   </div>
                   <div class="col-md-3">
                     <figure class="img-frame">
                       <div class="img-fixed">
-                        <img src="assets/mindmap.png" class="img-fluid" alt="Early UI preview of game layout during development">
+                        <img src="assets/mindmap.png" class="img-fluid" alt="Insights mindmap to organize research findings">
                       </div>
                       
                       <figcaption class="p-2">
-                        Early UI preview as the layout evolved from prototype to Emotion Mode-ready.
+                        Insights mindmap to organize research findings.
                       </figcaption>
                     </figure>
                   </div>
@@ -363,11 +363,11 @@
                 <div class="col-md-6">
                   <figure class="img-frame">
                     <img src="assets/proto_img.png" class="img-fluid" alt="Early paper/lo‑fi prototype sketches">
-                    <figcaption class="p-2">Early lo‑fi sketches and flow. (Placeholder composite)</figcaption>
+                    <figcaption class="p-2">Early lo‑fi sketches and flow.</figcaption>
                   </figure>
                   <figure class="img-frame">
                     <img src="assets/wireframe flow design.png" class="img-fluid" alt="Early paper/lo‑fi prototype sketches">
-                    <figcaption class="p-2">Early lo‑fi sketches and flow. (Placeholder composite)</figcaption>
+                    <figcaption class="p-2">Early design sketches for different beginning flows.</figcaption>
                   </figure>
                 </div>
                 <div class="col-md-6">
@@ -390,7 +390,7 @@
 
               <div class="mt-4">
                 <h6>Key Game Features updates (before → after)</h6>
-                <div class="row g-4 ks-gallery">
+                <div class="row g-4 ks-gallery artifact-gallery">
                   <div class="col-md-6">
                     <figure class="img-frame">
                       <div class="img-fixed">
@@ -412,7 +412,7 @@
                   <div class="col-md-6">
                     <figure class="img-frame">
                       <div class="img-fixed">
-                        <img src="assets/old_emotion.png" class="img-fluid" alt="Before Emotion logic">
+                        <img src="assets/old_emotion.png" class="img-fluid" alt="Before Emotion visual screen">
                       </div>
                       
                       <figcaption class="p-2">Before: Faint bubble colors, Emotion indicator too small.</figcaption>
@@ -421,7 +421,7 @@
                   <div class="col-md-6">
                     <figure class="img-frame">
                       <div class="img-fixed">
-                        <img src="assets/gold_bubbles.png" class="img-fluid" alt="After Emotion logic">
+                        <img src="assets/gold_bubbles.png" class="img-fluid" alt="After Emotion visual screen show improvements">
                       </div>
                       
                       <figcaption class="p-2">After: 3D bubble colors + smiles reward (bonus spawns, score multipliers).</figcaption>
@@ -438,7 +438,7 @@
                 <li><strong>Emotion detection:</strong> light‑weight facial expression model (face-api.js) running in local library on device; no images leave the browser.</li>
                 <li><strong>Data:</strong> A Cloudflare Worker writes anonymized session stats to Google Sheets for secure research study data handling. Player identity is not stored.</li>
               </ul>
-              <p>Tech demo: <a href="https://kpao2020.github.io/bubble-game" target="_blank" rel="noopener">Live Demo</a> — the repo documents build steps and model choices.</p>
+              <p>Tech demo: <a href="https://kpao2020.github.io/bubble-game" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary ms-1">Live Demo</a> — the repo documents build steps and model choices.</p>
             </section>
 
             <section id="blueprint" class="mb-5">
@@ -465,7 +465,7 @@
               <div class="row g-4 mt-3">
                 <div class="col-md-6">
                   <figure class="img-frame">
-                    <img src="assets/storyboard.jpg" class="img-fluid" alt="After Emotion logic">
+                    <img src="assets/storyboard.jpg" class="img-fluid" alt="Storyboard user journey">
                     <figcaption class="p-2">Storyboard user journey.</figcaption>
                   </figure>
                 </div>
@@ -499,7 +499,7 @@
                 <div class="col-md-6">
                   <figure class="img-frame">
                     <img src="assets/leaderboard.png" class="img-fluid phone-screenshot" alt="leaderboard concept">
-                    <figcaption class="p-2">Concept: daily Focus seed and lightweight leaderboard with anonymous IDs.</figcaption>
+                    <figcaption class="p-2">Concept: daily Focus seed and lightweight leaderboard with player-defined names.</figcaption>
                   </figure>
                 </div>
               </div>

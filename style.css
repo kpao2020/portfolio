@@ -387,3 +387,30 @@ html[data-theme='dark'] .sticky-toc .toc-link[aria-current="true"] {
   color: #ffffff;
   font-weight: 600;
 }
+/* Offset section anchors on case-study page so headings aren't hidden under navbar */
+#overview,
+#problem,
+#devjourney,
+#solution,
+#tech,
+#blueprint,
+#reflection {
+  scroll-margin-top: 110px; /* tweak this if you adjust navbar height */
+}
+
+/* Make outline buttons have black-ish background in dark theme (like project cards) */
+html[data-theme='dark'] .btn-outline-primary {
+  background-color: rgba(0,0,0,0.35);   /* same black transparent bg you see on cards */
+  color: #cbc3e3 !important;      /* purple text */
+  border-color: var(--primary);
+}
+
+html[data-theme='dark'] .btn-outline-primary:hover {
+  background-color: var(--primary);       /* purple fill on hover */
+  color: #ffffff !important;              /* white text on hover */
+  border-color: var(--primary);
+}
+/* Ensure artifact captions line up visually in their grids */
+.artifact-gallery .img-frame figcaption {
+  min-height: 5.6rem; /* tweak this value if you change caption text */
+}

@@ -1,7 +1,7 @@
 # Live Link
 https://kpao2020.github.io/portfolio
 
-# Personal Portfolio — v1.4.2
+# Personal Portfolio — v1.4.5
 
 A dark-mode, techy personal portfolio built with **HTML + Bootstrap + custom CSS/JS** and deployed on **GitHub Pages**.  
 Includes light/dark theme toggle, subtle animations, project grid, skills lists, and a footer-style contact section.
@@ -9,6 +9,22 @@ Includes light/dark theme toggle, subtle animations, project grid, skills lists,
 ---
 
 ## ✨ Version History
+
+### v1.4.5
+- Improved alt text across multiple case-study images for accessibility and clarity.
+- Ensured every artifact-gallery row uses consistent `.artifact-gallery` class for unified caption alignment.
+- Fixed case-study TOC scroll-offset using `scroll-margin-top` so section titles no longer hide behind the sticky navbar.
+- Updated styles for dark-theme `.btn-outline-primary` buttons to ensure consistent black background + purple/white hover across case-study hero and caption buttons.
+
+### v1.4.4
+- Styled the first case-study “Live Game” caption link as a `btn btn-sm btn-outline-primary` button so it visually matches the project card CTAs.
+- Tagged the Development Journey artifact grids with `.artifact-gallery` and added a `min-height` to their `<figcaption>` elements to visually align caption bands across tiles.
+- Reviewed case-study layout after these tweaks to ensure galleries, captions, and buttons remain consistent with the main portfolio styling.
+
+### v1.4.3
+- Matched the Hero “Read Case Study” CTA to the project card buttons using a `btn btn-sm btn-outline-primary` style, so it looks consistent across the site.
+- Added a dark-theme override for `.btn-outline-primary` so outline buttons (including the Hero and case study buttons) have a subtle black background by default and turn solid purple with white text on hover.
+- Planned case-study UI updates: styling the first “Live Game” caption link as a button and aligning caption heights in artifact galleries for a cleaner grid layout.
 
 ### v1.4.2
 - Added final visual refinements to the image system in `case-study.html`, using `.img-fixed` for consistent gallery sizing while preserving captions.

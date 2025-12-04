@@ -13,3 +13,8 @@
 [2025-12-03 22:10:00] v1.4.2 — Finalized consistent image sizing using .img-fixed wrappers; ensured captions display correctly across all galleries.
 [2025-12-03 22:12:00] v1.4.2 — Added phone-screenshot class for correct display of tall mobile aspect images (e.g., leaderboard).
 [2025-12-03 22:15:00] v1.4.2 — Synced README, project plan, and log with new version update and visual improvements.
+[2025-12-03 22:35:00] v1.4.3 — Updated Hero “Read Case Study” CTA to use Bootstrap outline button styling and added dark-theme overrides so outline buttons share a consistent black background with purple hover.
+[2025-12-03 22:40:00] v1.4.3 — Planned case-study layout improvements: button-styled live link in the first figure caption and aligned caption heights for artifact galleries; synced README and project plan with this work.
+[2025-12-03 23:00:00] v1.4.4 — Styled the case-study Overview “Live Game” link as an outline button consistent with project card CTAs.
+[2025-12-03 23:05:00] v1.4.4 — Tagged artifact galleries and added a min-height for captions to keep Development Journey tiles visually aligned.
+[2025-12-03 23:35:00] v1.4.5 — Improved image alt text and ensured consistent .artifact-gallery usage across case-study; fixed scroll offset with scroll-margin-top; verified dark-theme outline button styling across hero and case-study.
