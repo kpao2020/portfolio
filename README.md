@@ -1,7 +1,7 @@
 # Live Link
 https://kpao2020.github.io/portfolio
 
-# Personal Portfolio — v1.4.0
+# Personal Portfolio — v1.4.2
 
 A dark-mode, techy personal portfolio built with **HTML + Bootstrap + custom CSS/JS** and deployed on **GitHub Pages**.  
 Includes light/dark theme toggle, subtle animations, project grid, skills lists, and a footer-style contact section.
@@ -9,6 +9,17 @@ Includes light/dark theme toggle, subtle animations, project grid, skills lists,
 ---
 
 ## ✨ Version History
+
+### v1.4.2
+- Added final visual refinements to the image system in `case-study.html`, using `.img-fixed` for consistent gallery sizing while preserving captions.
+- Ensured phone screenshots (e.g., leaderboard) display proportionally using the `.phone-screenshot` class.
+- Reviewed full gallery layout and confirmed consistent behavior across all sections.
+- Synced project_log and project_plan with latest changes.
+
+### v1.4.1
+- Expanded the **Popping Bubbles** case study with a full image gallery (research artifacts, development journey, solution, blueprint, reflection).
+- Normalized gallery image sizing with `.img-frame` and `.ks-gallery` so mixed-aspect screenshots still align visually.
+- Ensured every screenshot has a descriptive `<figcaption>` for better accessibility and context.
 
 ### v1.4.0
 - add screenshots to various sections and adjust layout

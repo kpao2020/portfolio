@@ -7,3 +7,9 @@
 [2025-11-22 21:48:00] v1.3.5 — User fixed dark-mode TOC (sidebar links + heading) in style.css; verified case-study visuals; updated README and plan; pending approval for minor case-study HTML copy/asset fixes.
 [2025-11-22 22:05:00] v1.3.5 — User finalized dark-mode TOC and case-study copy/image; generated README and plan; awaiting deploy + README merge.
 [2025-12-01 16:35:00] v1.3.6 — Add a Development Journey section.
+[2025-12-03 18:00:00] v1.4.0 — User added screenshots across portfolio and case-study sections; initial layout adjustments.
+[2025-12-03 18:10:00] v1.4.1 — Finalized case-study gallery using /assets images (research artifacts, dev journey, solution, blueprint, reflection); verified `<figure>`/`<figcaption>` structure.
+[2025-12-03 18:15:00] v1.4.1 — Updated README version history and project plan to mark optional image work as completed and note future optional polish.
+[2025-12-03 22:10:00] v1.4.2 — Finalized consistent image sizing using .img-fixed wrappers; ensured captions display correctly across all galleries.
+[2025-12-03 22:12:00] v1.4.2 — Added phone-screenshot class for correct display of tall mobile aspect images (e.g., leaderboard).
+[2025-12-03 22:15:00] v1.4.2 — Synced README, project plan, and log with new version update and visual improvements.

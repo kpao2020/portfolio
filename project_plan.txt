@@ -48,9 +48,11 @@ Notes: Will ask for approval before each change.
 5) Synced docs: README bumped to **v1.3.5**; plan/log updated accordingly.
 6) Upload `case-study.html` to your portfolio repo and deploy on GitHub Pages.
 7) Merge README updates into `README.md`.
+8) Added optional gallery assets/screenshots throughout case-study.html (research, development journey, solution, blueprint, reflection sections).
+9) Finalized consistent image layout using .img-fixed containers; ensured all figcaptions remain visible; added phone-screenshot class for tall portrait images.
 
 === Remaining action items ===
-1) Optionally add more images from bubble-game/assets for before/after.
+1) (Optional) Future polish: refine screenshot captions/microcopy and swap any remaining placeholder images with final game captures if needed.
 
 === Changes 2025-11-22 19:06 ===
 - Merged case study styles into style.css and ensured one-per-line TOC links.
@@ -80,3 +82,15 @@ Notes: Will ask for approval before each change.
 
 === Changes 2025-12-01 16:35 ===
 - v1.3.6 add a Development Journey section
+
+=== Changes 2025-12-03 18:15 ===
+- v1.4.0–v1.4.1: Integrated additional screenshots into case-study.html (research artifacts, dev journey, solution, blueprint, reflection).
+- Confirmed consistent layout using `.img-frame` and `.ks-gallery` styling while keeping all `<figcaption>` text visible.
+- Updated README.md version header and Version History to v1.4.1.
+- Updated project_log.log and project_plan.txt to mark the optional image work as completed and note optional future polish.
+
+=== Changes 2025-12-03 22:15 ===
+- v1.4.2: Finalized gallery layout using .img-fixed wrappers for consistent sizing; fixed portrait screenshots with .phone-screenshot class.
+- Reviewed all pages for visual consistency after adding remaining images.
+- Updated README.md version header and added new v1.4.2 changelog entry.
+- Updated project_log.log and project_plan.txt to reflect completed image integration tasks.
