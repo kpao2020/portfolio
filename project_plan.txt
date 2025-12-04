@@ -50,6 +50,9 @@ Notes: Will ask for approval before each change.
 7) Merge README updates into `README.md`.
 8) Added optional gallery assets/screenshots throughout case-study.html (research, development journey, solution, blueprint, reflection sections).
 9) Finalized consistent image layout using .img-fixed containers; ensured all figcaptions remain visible; added phone-screenshot class for tall portrait images.
+10) Updated homepage Hero to feature a “Read Case Study” CTA using outline button styling; added dark-theme outline button overrides for consistent black background + purple hover across the site.
+11) Styled the “Live Game” link in the first case-study figure as a button matching project card CTAs; aligned caption heights in artifact galleries using .artifact-gallery min-height.
+12) Improved alt text across case-study images; standardized .artifact-gallery usage; added scroll-margin-top to fix TOC anchor offset; verified consistent outline-button styling in dark theme.
 
 === Remaining action items ===
 1) Add a paragraph or two to answer following questions:
@@ -98,3 +101,18 @@ Notes: Will ask for approval before each change.
 - Reviewed all pages for visual consistency after adding remaining images.
 - Updated README.md version header and added new v1.4.2 changelog entry.
 - Updated project_log.log and project_plan.txt to reflect completed image integration tasks.
+
+=== Changes 2025-12-03 22:40 ===
+- v1.4.3: Updated hero CTA on index.html to use outline button styling and added dark-theme overrides for .btn-outline-primary.
+- Documented planned UI improvements for the case-study page: button-styled “Live Game” link in the first figure and aligned caption heights for artifact galleries.
+- Updated README.md header and Version History to v1.4.3 and appended v1.4.3 entries to project_log.log.
+
+=== Changes 2025-12-03 23:05 ===
+- v1.4.4: Styled the case-study Overview “Live Game” caption link as an outline button; aligned artifact gallery captions using .artifact-gallery.
+- Updated README.md header and Version History to v1.4.4 and appended new v1.4.4 entries to project_log.log.
+- Captured remaining work around explaining emotion detection choices, privacy, and user reactions, plus optional anchor scroll-offset improvement.
+
+=== Changes 2025-12-03 23:35 ===
+- v1.4.5: Improved alt text for accessibility, standardized artifact-gallery structure, and added section scroll-margin-top for TOC usability.
+- Verified dark-theme outline-button styling works across case-study caption buttons and hero CTA.
+- Updated README, project_log, and project_plan to reflect structural and accessibility improvements.
