@@ -52,7 +52,11 @@ Notes: Will ask for approval before each change.
 9) Finalized consistent image layout using .img-fixed containers; ensured all figcaptions remain visible; added phone-screenshot class for tall portrait images.
 
 === Remaining action items ===
-1) (Optional) Future polish: refine screenshot captions/microcopy and swap any remaining placeholder images with final game captures if needed.
+1) Add a paragraph or two to answer following questions:
+    Why you chose that emotional detection as a feature?
+    Why the images don’t leave the browser
+    How did the users react to that?
+2) (Optional) Future polish: refine screenshot captions/microcopy and swap any remaining placeholder images with final game captures if needed.
 
 === Changes 2025-11-22 19:06 ===
 - Merged case study styles into style.css and ensured one-per-line TOC links.
