@@ -298,7 +298,54 @@ html[data-theme='light'] footer .text-body-secondary {
 .badge-pill { border-radius:999px; }
 .quote { font-style: italic; }
 figure figcaption { font-size: .9rem; opacity: .8; }
-.ks-gallery img { max-height: 280px; object-fit: cover; }
+/* Case study gallery tiles */
+.ks-gallery .img-frame {
+  display: flex;
+  flex-direction: column;
+}
+
+.ks-gallery .img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* crop to fill tile, no stretching */
+  display: block;
+  flex: 11 auto;
+}
+.img-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;    /* prevents one huge image from stretching the column */
+}
+
+/* Fixed-size IMAGE BOX, captions remain outside of it */
+.ks-gallery .img-fixed {
+  height: 260px;       /* your desired tile height */
+  width: 100%;
+  overflow: hidden;    /* hide the crop, not the caption */
+  border-radius: 12px 12px 0 0;
+}
+
+.ks-gallery .img-fixed img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* clean crop */
+  display: block;
+}
+
+/* Caption spacing */
+.ks-gallery .img-frame figcaption {
+  padding-top: 0.5rem;
+}
+
+/* Phone-sized screenshots (e.g., leaderboard) */
+.phone-screenshot {
+  max-width: 220px;   /* typical phone width */
+  width: 100%;        /* still responsive on small screens */
+  display: block;
+  margin-inline: auto; /* center inside the column */
+}
+
+
 .blueprint { background: linear-gradient(135deg, rgba(59,130,246,.08), rgba(147,51,234,.08)); border:1px dashed rgba(255,255,255,.15); border-radius: 12px; }
 .sticky-toc { position: sticky; top: 90px; }
 .toc-link { display:block; padding:.35rem 0; opacity:.95; }
