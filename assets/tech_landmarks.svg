@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360">
+  <rect x="0" y="0" width="900" height="360" fill="#ffffff" />
+  <style>
+    .face { fill: #f3f4ff; stroke: #111827; stroke-width: 2; }
+    .feature-line { stroke: #111827; stroke-width: 1.5; fill: none; }
+    .dot { fill: #2563eb; }
+    .dot-label { font-family: Arial, sans-serif; font-size: 11px; fill: #111827; }
+    .panel { fill: #ffffff; stroke: #111827; stroke-width: 1.5; rx: 10; ry: 10; }
+    .panel-title { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+    .panel-text { font-family: Arial, sans-serif; font-size: 12px; }
+    .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; }
+    .subtitle { font-family: Arial, sans-serif; font-size: 13px; fill: #4b5563; }
+  </style>
+
+  <text x="450" y="30" text-anchor="middle" class="title">
+    face-api.js – Landmarks to Emotions
+  </text>
+  <text x="450" y="50" text-anchor="middle" class="subtitle">
+    Dots &amp; lines show facial landmarks → model turns them into expression scores
+  </text>
+
+  <!-- Face circle -->
+  <circle cx="220" cy="190" r="110" class="face"/>
+
+  <!-- Eyes -->
+  <ellipse cx="180" cy="170" rx="18" ry="10" class="feature-line"/>
+  <ellipse cx="260" cy="170" rx="18" ry="10" class="feature-line"/>
+
+  <!-- Nose -->
+  <path d="M220 165 L215 195 L225 215" class="feature-line"/>
+
+  <!-- Mouth -->
+  <path d="M180 235 Q220 265 260 235" class="feature-line"/>
+
+  <!-- Landmark dots (sample) -->
+  <circle cx="180" cy="170" r="4" class="dot"/>
+  <text x="170" y="165" class="dot-label">1</text>
+
+  <circle cx="260" cy="170" r="4" class="dot"/>
+  <text x="265" y="165" class="dot-label">2</text>
+
+  <circle cx="220" cy="165" r="4" class="dot"/>
+  <text x="210" y="160" class="dot-label">3</text>
+
+  <circle cx="210" cy="230" r="4" class="dot"/>
+  <text x="200" y="225" class="dot-label">4</text>
+
+  <circle cx="230" cy="230" r="4" class="dot"/>
+  <text x="238" y="225" class="dot-label">5</text>
+
+  <!-- Arrows from face to panel -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#111827"/>
+    </marker>
+  </defs>
+
+  <line x1="330" y1="150" x2="420" y2="130" stroke="#111827" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="330" y1="210" x2="420" y2="210" stroke="#111827" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="330" y1="250" x2="420" y2="290" stroke="#111827" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Right panel: expression scores -->
+  <rect x="430" y="90" width="380" height="220" class="panel"/>
+
+  <text x="450" y="115" class="panel-title">Expression scores (sample)</text>
+
+  <text x="450" y="145" class="panel-text">happy      0.78</text>
+  <text x="450" y="165" class="panel-text">sad        0.04</text>
+  <text x="450" y="185" class="panel-text">angry      0.06</text>
+  <text x="450" y="205" class="panel-text">stressed   0.03</text>
+  <text x="450" y="225" class="panel-text">neutral    0.09</text>
+
+  <text x="450" y="255" class="panel-text">sample window: 1500 ms</text>
+  <text x="450" y="275" class="panel-text">model: face-api.js (on-device)</text>
+  <text x="450" y="295" class="panel-text">output → game rules (bonus bubbles, pacing)</text>
+</svg>

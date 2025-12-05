@@ -414,3 +414,20 @@ html[data-theme='dark'] .btn-outline-primary:hover {
 .artifact-gallery .img-frame figcaption {
   min-height: 5.6rem; /* tweak this value if you change caption text */
 }
+
+/* Inline code styling tuned for dark/light themes */
+code {
+  padding: 0.05rem 0.25rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+html[data-theme='dark'] code {
+  background-color: rgba(31, 41, 55, 0.9);
+  color: var(--active-fg);
+}
+
+html[data-theme='light'] code {
+  background-color: rgba(148, 163, 184, 0.12);
+  color: #111827;
+}

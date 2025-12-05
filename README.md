@@ -1,7 +1,7 @@
 # Live Link
 https://kpao2020.github.io/portfolio
 
-# Personal Portfolio — v1.4.5
+# Personal Portfolio — v1.4.7
 
 A dark-mode, techy personal portfolio built with **HTML + Bootstrap + custom CSS/JS** and deployed on **GitHub Pages**.  
 Includes light/dark theme toggle, subtle animations, project grid, skills lists, and a footer-style contact section.
@@ -9,6 +9,17 @@ Includes light/dark theme toggle, subtle animations, project grid, skills lists,
 ---
 
 ## ✨ Version History
+
+### v1.4.7
+- Updated the navbar on both `index.html` and `case-study.html` to include a left-aligned **Portfolio** link that points to the main page hero.
+- Moved the **Case Study** nav item to the far right so it reads as a dedicated deep-dive entry point.
+- Adjusted `script.js` so the Portfolio link highlights when the Hero section is in view while preserving active highlighting for other sections and the case-study page.
+
+### v1.4.6
+- Expanded the Technology section of the case study with clearer explanation of emotion detection, privacy-by-design camera handling, and user-specific telemetry.
+- Added two new SVG diagrams (`tech_pipeline.svg` and `tech_landmarks.svg`) to visualize the on-device pipeline and how face-api.js turns landmarks into emotion scores.
+- Refactored Technology content into blueprint-style cards and a two-column System Architecture layout so it feels less like a wall of text.
+- Updated the “Tech demo” area into a prominent “Play the live game” call-to-action with a large primary button.
 
 ### v1.4.5
 - Improved alt text across multiple case-study images for accessibility and clarity.
