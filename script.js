@@ -56,7 +56,7 @@
 
   // On index, highlight section as you scroll
   if (path === '' || path === 'index.html' || hrefMatchesRoot()) {
-    const sectionIds = ['about','projects','skills','contact'];
+    const sectionIds = ['hero','about','projects','skills','contact'];
     const map = new Map();
     links.forEach((a)=>{
       const h = a.getAttribute('href');
@@ -68,7 +68,7 @@
         const nav = map.get(id);
         if (!nav) return;
         if (entry.isIntersecting) {
-          document.querySelectorAll('.navbar .nav-link').forEach(el=>el.classList.remove('active'));
+          map.forEach((navLink)=> navLink.classList.remove('active'));
           nav.classList.add('active');
         }
       });

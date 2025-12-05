@@ -18,3 +18,6 @@
 [2025-12-03 23:00:00] v1.4.4 — Styled the case-study Overview “Live Game” link as an outline button consistent with project card CTAs.
 [2025-12-03 23:05:00] v1.4.4 — Tagged artifact galleries and added a min-height for captions to keep Development Journey tiles visually aligned.
 [2025-12-03 23:35:00] v1.4.5 — Improved image alt text and ensured consistent .artifact-gallery usage across case-study; fixed scroll offset with scroll-margin-top; verified dark-theme outline button styling across hero and case-study.
+[2025-12-04 11:15:00] v1.4.6 — Expanded the case-study Technology section with diagrams, blueprint cards, two-column System Architecture, and a more prominent “Play the live game” CTA; synced README, plan, and HTML.
+[2025-12-04 11:25:00] v1.4.6 — Fine-tuned the Technology CTA spacing, copy, and button style to match existing outline-button patterns in the case study.
+[2025-12-04 11:40:00] v1.4.7 — Updated the navbar on index.html and case-study.html to include a left-aligned “Portfolio” link and moved “Case Study” to the far right; updated script.js so Portfolio highlights on the Hero section and active highlighting remains consistent across both pages.

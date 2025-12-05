@@ -15,6 +15,9 @@ Created: 2025-11-22 17:44
 - Always provide me downloadable files only to the files that have changes made.
 - Always ask me review and approval before you made changes to html, css or js files. 
 - No approval needed for log, plan, or readme files.
+- When documenting privacy and telemetry in the case study, do not describe the data as anonymized; scores and sessions are logged per player-defined username and device id.
+- Emphasize my background as a security engineer and highlight privacy-by-design decisions (on-device processing, no image uploads) when expanding the Technology section.
+- When we eventually update case-study.html for the Technology section, remember to also bump README.md version and update Version History plus project_log.log and this plan.
 
 Artifacts:
 - index.html
@@ -41,25 +44,25 @@ Time estimates:
 Notes: Will ask for approval before each change.
 
 === Completed tasks ===
-1) Add nav link to case-study.html in index.html after line 29.
-2) **User fixed dark-mode TOC colors** for case-study sidebar (links + heading) in `style.css` and confirmed contrast in browser.
-3) Case study hero text updated to reference face-api.js, p5.js, and p5play (copy polish).
-4) Replaced prototype image placeholder with real asset at `/bubble-game/assets/proto_img.png`.
-5) Synced docs: README bumped to **v1.3.5**; plan/log updated accordingly.
-6) Upload `case-study.html` to your portfolio repo and deploy on GitHub Pages.
-7) Merge README updates into `README.md`.
-8) Added optional gallery assets/screenshots throughout case-study.html (research, development journey, solution, blueprint, reflection sections).
-9) Finalized consistent image layout using .img-fixed containers; ensured all figcaptions remain visible; added phone-screenshot class for tall portrait images.
-10) Updated homepage Hero to feature a “Read Case Study” CTA using outline button styling; added dark-theme outline button overrides for consistent black background + purple hover across the site.
-11) Styled the “Live Game” link in the first case-study figure as a button matching project card CTAs; aligned caption heights in artifact galleries using .artifact-gallery min-height.
-12) Improved alt text across case-study images; standardized .artifact-gallery usage; added scroll-margin-top to fix TOC anchor offset; verified consistent outline-button styling in dark theme.
+ 1) Add nav link to case-study.html in index.html after line 29.
+ 2) **User fixed dark-mode TOC colors** for case-study sidebar (links + heading) in `style.css` and confirmed contrast in browser.
+ 3) Case study hero text updated to reference face-api.js, p5.js, and p5play (copy polish).
+ 4) Replaced prototype image placeholder with real asset at `/bubble-game/assets/proto_img.png`.
+ 5) Synced docs: README bumped to **v1.3.5**; plan/log updated accordingly.
+ 6) Upload `case-study.html` to your portfolio repo and deploy on GitHub Pages.
+ 7) Merge README updates into `README.md`.
+ 8) Added optional gallery assets/screenshots throughout case-study.html (research, development journey, solution, blueprint, reflection sections).
+ 9) Finalized consistent image layout using .img-fixed containers; ensured all figcaptions remain visible; added phone-screenshot class for tall portrait images.
+ 10) Updated homepage Hero to feature a “Read Case Study” CTA using outline button styling; added dark-theme outline button overrides for consistent black background + purple hover across the site.
+ 11) Styled the “Live Game” link in the first case-study figure as a button matching project card CTAs; aligned caption heights in artifact galleries using .artifact-gallery min-height.
+ 12) Improved alt text across case-study images; standardized .artifact-gallery usage; added scroll-margin-top to fix TOC anchor offset; verified consistent outline-button styling in dark theme.
+ 13) Expanded Technology section in case-study.html to document emotion detection rationale, privacy-by-design camera handling, telemetry with player-defined username + device id, and system architecture (1500 ms face-api.js sampling).
+ 14) v1.4.6 — Expanded Technology section with emotion/telemetry details, diagrams, and more prominent Tech demo CTA; synced HTML/CSS and later fine-tuned CTA spacing/copy/button style to match outline buttons.
+ 15) v1.4.7 — Navbar updated to add a Portfolio link on the left, move Case Study to the right, and keep active highlighting consistent across pages.
 
 === Remaining action items ===
-1) Add a paragraph or two to answer following questions:
-    Why you chose that emotional detection as a feature?
-    Why the images don’t leave the browser
-    How did the users react to that?
-2) (Optional) Future polish: refine screenshot captions/microcopy and swap any remaining placeholder images with final game captures if needed.
+1) (Optional) Future polish: micro-tune copy length in Technology cards if it still feels dense after more user testing.
+2) (Optional) Future polish: add small inline notes in README linking directly to the live case-study page and game demo.
 
 === Changes 2025-11-22 19:06 ===
 - Merged case study styles into style.css and ensured one-per-line TOC links.
@@ -116,3 +119,24 @@ Notes: Will ask for approval before each change.
 - v1.4.5: Improved alt text for accessibility, standardized artifact-gallery structure, and added section scroll-margin-top for TOC usability.
 - Verified dark-theme outline-button styling works across case-study caption buttons and hero CTA.
 - Updated README, project_log, and project_plan to reflect structural and accessibility improvements.
+
+=== Changes 2025-12-04 00:30 ===
+- Captured new instructions for expanding the Technology section (emotion detection rationale, privacy-by-design explanation, user reaction framing, and telemetry details).
+- Updated the “Instructions” and “Remaining action items” sections in this plan to reflect the security-engineer perspective, 1500 ms face-api.js polling interval, user-specific logging, and future README/version update work.
+
+=== Changes 2025-12-04 11:15 ===
+- Expanded the Technology section in case-study.html with clearer emotion detection rationale, security/privacy-by-design explanation, and telemetry notes.
+- Added two new diagrams (pipeline + landmarks) and integrated them into the Technology layout.
+- Converted the Emotion/Privacy sections into blueprint-style cards; reorganized System Architecture into a two-column blueprint card layout.
+- Updated README.md to v1.4.6 and synced project_log.log with new entries.
+
+=== Changes 2025-12-04 11:25 ===
+- Improved CTA readability in the Technology section: added spacing, unified text color for dark mode, refined CTA wording (“Try the live game”), and switched to the outline button style for consistency across the site.
+
+=== Changes 2025-12-04 11:40 ===
+- Updated the navbar on index.html and case-study.html:
+  - Added a left-aligned “Portfolio” link.
+  - Moved “Case Study” all the way to the right.
+  - Synced script.js to support Portfolio active-highlighting on the Hero section.
+- Bumped README.md to v1.4.7 and appended new version history entry.
+- Updated project_log.log and project_plan.txt to reflect navbar modifications.
